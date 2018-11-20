@@ -1,11 +1,11 @@
-import React from 'react'
+import React from 'react';
 
 // Import typefaces
-import 'typeface-montserrat'
-import 'typeface-merriweather'
+import 'typeface-montserrat';
+import 'typeface-merriweather';
 
-import profilePic from '../../../assets/profile-pic.jpg'
-import { rhythm } from '../../../utils/typography'
+import profilePic from '../../../assets/profile-pic.jpg';
+import { rhythm } from '../../../utils/typography';
 
 class Bio extends React.Component {
   render() {
@@ -18,24 +18,23 @@ class Bio extends React.Component {
       >
         <img
           src={profilePic}
-          alt={`Kyle Mathews`}
+          alt={`Hamed Farag`}
           style={{
             marginRight: rhythm(1 / 2),
             marginBottom: 0,
+            borderRadius: '50%',
             width: rhythm(2),
             height: rhythm(2),
           }}
         />
         <p>
-          Written by <strong>Kyle Mathews</strong> who lives and works in San
-          Francisco building useful things.{' '}
-          <a href="https://twitter.com/kylemathews">
-            You should follow him on Twitter
-          </a>
+          Written by <strong>Hamed Farag</strong> who lives and works in Cairo
+          building valuable things.{' '}
+          <a href="https://twitter.com/Hamed_Farag">follow me on Twitter</a>
         </p>
       </div>
-    )
+    );
   }
 }
 
-export default Bio
+export default Bio;
