@@ -4,9 +4,9 @@
   "version": "1.0.0",
   "author": "Hamed Farag",
   "bugs": {
-    "url": ""
+    "url": "https://github.com/hamed-farag/blog/issues"
   },
-  "homepage": "",
+  "homepage": "https://hamed-farag.github.io/blog/",
   "keywords": [
     "gatsby",
     "code",
@@ -18,7 +18,7 @@
   "license": "MIT",
   "repository": {
     "type": "git",
-    "url": ""
+    "url": "git+https://github.com/hamed-farag/blog.git"
   },
   "scripts": {
     "dev": "gatsby develop",

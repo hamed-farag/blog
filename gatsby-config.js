@@ -5,7 +5,7 @@ module.exports = {
     description: 'Personal Blog Stuffed with Code',
     siteUrl: '',
   },
-  pathPrefix: '/hamed-farag-blog',
+  pathPrefix: '/blog',
   plugins: [
     {
       resolve: `gatsby-source-filesystem`,
