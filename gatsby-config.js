@@ -3,7 +3,7 @@ module.exports = {
     title: `Hamed's Blog`,
     author: 'Hamed Farag',
     description: 'Personal Blog Stuffed with Code',
-    siteUrl: '',
+    siteUrl: 'https://hamed-farag.github.io/blog/',
   },
   pathPrefix: '/blog',
   plugins: [
@@ -65,5 +65,11 @@ module.exports = {
         pathToConfigModule: 'src/utils/typography',
       },
     },
+    {
+      resolve: `gatsby-plugin-styled-components`,
+      options: {
+        displayName: true,
+      },
+    },
   ],
-}
+};
