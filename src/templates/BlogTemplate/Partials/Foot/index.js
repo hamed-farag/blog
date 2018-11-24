@@ -18,11 +18,11 @@ const renderTags = function(tags) {
 
 export default function(props) {
   const { title, url, tags } = props.metadate;
-  const tagsArr = tags.split(',');
+  const tagsArr = tags && tags.split(',');
 
   return (
     <Foot>
-      <Tags>{renderTags(tagsArr)}</Tags>
+      <Tags>{tagsArr && renderTags(tagsArr)}</Tags>
       <Share>
         <span>Share: </span>
         <TwitterShareButton url={url} title={title} hashtags={tagsArr}>
