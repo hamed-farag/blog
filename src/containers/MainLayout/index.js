@@ -7,14 +7,16 @@ class MainLayout extends React.Component {
     const { children, title } = this.props;
 
     return (
-      <Container>
+      <React.Fragment>
         <Header>
-          <h3>
+          <h2>
             <Link to={'/'}>{title}</Link>
-          </h3>
+          </h2>
         </Header>
-        <Body>{children}</Body>
-      </Container>
+        <Container>
+          <Body>{children}</Body>
+        </Container>
+      </React.Fragment>
     );
   }
 }
