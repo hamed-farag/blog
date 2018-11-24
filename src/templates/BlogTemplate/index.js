@@ -6,13 +6,15 @@ import get from 'lodash/get';
 import Bio from '../../components/shared/Bio';
 import MainLayout from '../../containers/MainLayout';
 import Head from './Partials/Head';
+import Foot from './Partials/Foot';
+import { Body } from './ui';
+
 import Navigation from './Partials/Navigation';
 
 class BlogPostTemplate extends React.Component {
   render() {
     const { location, pageContext, data } = this.props;
     const post = data.markdownRemark;
-    debugger;
     const siteTitle = get(this.props, 'data.site.siteMetadata.title');
     const siteDescription = post.excerpt;
 
@@ -33,18 +35,21 @@ class BlogPostTemplate extends React.Component {
           title={`${post.frontmatter.title} | ${siteTitle}`}
         />
         <Head
-          postHeader={{
+          metadate={{
             title,
             date,
             readingTime,
             subTitle,
-            tags,
             category,
           }}
         />
-        <div dangerouslySetInnerHTML={{ __html: post.html }} />
+        <Body dangerouslySetInnerHTML={{ __html: post.html }} />
+        <Foot
+          metadate={{
+            tags,
+          }}
+        />
         <Bio />
-
         <Navigation pageContext={pageContext} />
       </MainLayout>
     );
@@ -68,7 +73,7 @@ export const pageQuery = graphql`
       frontmatter {
         title
         subTitle
-        date(formatString: "MMMM DD, YYYY")
+        date(formatString: "DD MMM, YYYY")
         tags
         category
         readingTime

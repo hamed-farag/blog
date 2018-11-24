@@ -1,29 +1,16 @@
 import React from 'react';
-import { rhythm, scale } from '../../../../utils/typography';
+
+import { Head, Metadata } from './ui';
 
 export default function(props) {
-  const {
-    title,
-    date,
-    readingTime,
-    subTitle,
-    tags,
-    category,
-  } = props.postHeader;
-
+  const { title, date, readingTime, subTitle, category } = props.metadate;
   return (
-    <div>
+    <Head>
       <h1>{title}</h1>
-      <p
-        style={{
-          ...scale(-1 / 5),
-          display: 'block',
-          marginBottom: rhythm(1),
-          marginTop: rhythm(-1),
-        }}
-      >
-        {date}
-      </p>
-    </div>
+      <h3>{subTitle}</h3>
+      <Metadata>
+        {date} | {readingTime}
+      </Metadata>
+    </Head>
   );
 }
