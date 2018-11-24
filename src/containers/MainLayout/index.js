@@ -12,6 +12,7 @@ class MainLayout extends React.Component {
           <h2>
             <Link to={'/'}>{title}</Link>
           </h2>
+          <span>beta</span>
         </Header>
         <Container>
           <Body>{children}</Body>
