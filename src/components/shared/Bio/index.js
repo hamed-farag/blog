@@ -1,40 +1,49 @@
 import React from 'react';
+import { StaticQuery, graphql } from 'gatsby';
 
-// Import typefaces
-import 'typeface-montserrat';
-import 'typeface-merriweather';
+import { Biography } from './ui';
 
-import profilePic from '../../../assets/profile-pic.jpg';
-import { rhythm } from '../../../utils/typography';
+import profilePic from '../../../assets/images/profile-pic.jpg';
 
-class Bio extends React.Component {
-  render() {
-    return (
-      <div
-        style={{
-          display: 'flex',
-          marginBottom: rhythm(2.5),
-        }}
-      >
-        <img
-          src={profilePic}
-          alt={`Hamed Farag`}
-          style={{
-            marginRight: rhythm(1 / 2),
-            marginBottom: 0,
-            borderRadius: '50%',
-            width: rhythm(2),
-            height: rhythm(2),
-          }}
-        />
+const Bio = ({ data }) => {
+  const { jobTitle, location, twitter } = data.markdownRemark.frontmatter;
+
+  return (
+    <Biography>
+      <img src={profilePic} alt={data.site.siteMetadata.author} />
+      <div>
+        <h2>{data.site.siteMetadata.author}</h2>
         <p>
-          Written by <strong>Hamed Farag</strong> who lives and works in Cairo
-          building valuable things.{' '}
-          <a href="https://twitter.com/Hamed_Farag">follow me on Twitter</a>
+          {jobTitle} | {location}
         </p>
+        <p dangerouslySetInnerHTML={{ __html: data.markdownRemark.html }} />
       </div>
-    );
-  }
-}
+    </Biography>
+  );
+};
 
-export default Bio;
+export default props => {
+  return (
+    <StaticQuery
+      query={graphql`
+        query {
+          site {
+            siteMetadata {
+              author
+            }
+          }
+          markdownRemark(fields: { slug: { regex: "/(bio)/" } }) {
+            id
+            html
+            frontmatter {
+              location
+              twitter
+              jobTitle
+            }
+          }
+        }
+      `}
+      render={data => <Bio data={data} {...props} />}
+    />
+  );
+};
