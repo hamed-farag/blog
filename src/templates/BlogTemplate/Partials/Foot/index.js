@@ -1,8 +1,34 @@
 import React from 'react';
+import { Link } from 'gatsby';
+import { TwitterShareButton, TwitterIcon } from 'react-share';
+
+import { Foot, Tags, Tag, Share } from '../../ui';
+
 import { rhythm, scale } from '../../../../utils/typography';
 
-export default function(props) {
-  const { tags } = props.metadate;
+const renderTags = function(tags) {
+  return tags.map((tag, index) => {
+    return (
+      <Tag key={index}>
+        <Link to={'/'}>{tag}</Link>
+      </Tag>
+    );
+  });
+};
 
-  return <div>{tags}</div>;
+export default function(props) {
+  const { title, url, tags } = props.metadate;
+  const tagsArr = tags.split(',');
+
+  return (
+    <Foot>
+      <Tags>{renderTags(tagsArr)}</Tags>
+      <Share>
+        <span>Share: </span>
+        <TwitterShareButton url={url} title={title} hashtags={tagsArr}>
+          <TwitterIcon size={30} round={true} />
+        </TwitterShareButton>
+      </Share>
+    </Foot>
+  );
 }

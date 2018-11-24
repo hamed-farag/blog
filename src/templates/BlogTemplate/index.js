@@ -46,7 +46,9 @@ class BlogPostTemplate extends React.Component {
         <Body dangerouslySetInnerHTML={{ __html: post.html }} />
         <Foot
           metadate={{
+            title,
             tags,
+            url: location.href
           }}
         />
         <Bio />
