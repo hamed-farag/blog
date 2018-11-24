@@ -1,6 +1,7 @@
 import React from 'react';
 import { Link } from 'gatsby';
 import { Header, Body, Container } from './ui';
+import PoweredBy from '../../components/shared/PoweredBy';
 
 class MainLayout extends React.Component {
   render() {
@@ -16,6 +17,7 @@ class MainLayout extends React.Component {
         </Header>
         <Container>
           <Body>{children}</Body>
+          <PoweredBy />
         </Container>
       </React.Fragment>
     );
