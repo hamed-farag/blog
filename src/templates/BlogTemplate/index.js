@@ -7,7 +7,7 @@ import Bio from '../../components/shared/Bio';
 import MainLayout from '../../containers/MainLayout';
 import Head from './Partials/Head';
 import Foot from './Partials/Foot';
-import { Body } from './ui';
+import { Body, BlogGlobalStyle } from './ui';
 
 import Navigation from './Partials/Navigation';
 
@@ -34,6 +34,7 @@ class BlogPostTemplate extends React.Component {
           meta={[{ name: 'description', content: siteDescription }]}
           title={`${post.frontmatter.title} | ${siteTitle}`}
         />
+        <BlogGlobalStyle />
         <Head
           metadate={{
             title,
@@ -48,7 +49,7 @@ class BlogPostTemplate extends React.Component {
           metadate={{
             title,
             tags,
-            url: location.href
+            url: location.href,
           }}
         />
         <Bio />

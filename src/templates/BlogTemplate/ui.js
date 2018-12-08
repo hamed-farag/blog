@@ -1,6 +1,13 @@
-import styled from 'styled-components';
+import styled, { createGlobalStyle } from 'styled-components';
 
 import { rhythm, lineColor } from '../../utils/typography';
+
+export const BlogGlobalStyle = createGlobalStyle`
+  blockquote {
+    color: ${props => props.theme.blockquote.color};
+    border-left: 4px solid ${props => props.theme.blockquote.border};
+  }
+`;
 
 export const Body = styled.div`
   margin: ${rhythm(1)} 0;
@@ -39,7 +46,7 @@ export const Share = styled.div`
   -webkit-flex: 0 0 auto;
   -ms-flex: 0 0 auto;
   flex: 0 0 auto;
-  span{
+  span {
     font-size: ${rhythm(0.6)};
     margin-right: 5px;
   }
