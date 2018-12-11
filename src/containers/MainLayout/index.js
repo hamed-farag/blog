@@ -2,26 +2,34 @@ import React from 'react';
 import { Link } from 'gatsby';
 import { ThemeProvider } from 'styled-components';
 
-import { Header, Body, Container, Title, Control } from './ui';
-import { GlobalStyle, dark, light, themes } from './themes';
-import themeIcon from '../../assets/images/theme.png';
+import { setLocalStorage, getLocalStorage } from '../../utils/storage';
 
 import PoweredBy from '../../components/shared/PoweredBy';
 
+import { Header, Body, Container, Title, Control } from './ui';
+import { GlobalStyle, dark, light, themes } from './themes';
+
+import themeIcon from '../../assets/images/theme.png';
+
 class MainLayout extends React.Component {
   state = {
-    theme: themes.light,
+    theme: getLocalStorage('theme') || themes.light,
   };
+
+  saveSelectedTheme(theme) {
+    this.setState({ theme });
+    setLocalStorage('theme', theme);
+  }
 
   onThemeChange = () => {
     const { theme } = this.state;
     switch (theme) {
       case themes.dark:
-        this.setState({ theme: themes.light });
+        this.saveSelectedTheme(themes.light);
         break;
 
       default:
-        this.setState({ theme: themes.dark });
+        this.saveSelectedTheme(themes.dark);
         break;
     }
   };
