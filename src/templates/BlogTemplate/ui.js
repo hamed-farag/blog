@@ -94,7 +94,7 @@ export const Tag = styled.li`
       top: 10px;
     }
     &:after {
-      background: #fff;
+      background: ${props => props.theme.main.backgroundColor};
       border-bottom: 13px solid transparent;
       border-left: 10px solid #eee;
       border-top: 13px solid transparent;

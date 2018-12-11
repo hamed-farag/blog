@@ -6,7 +6,8 @@ export const Biography = styled.div`
   margin: ${rhythm(1)} 0;
   display: flex;
   padding: ${rhythm(0.5)};
-  background-color: #eeeeee;
+  background-color: ${props => props.theme.bio.backgroundColor};
+  color: ${props => props.theme.bio.textColor};
   img {
     border: 1px solid ${lineColor};
     padding: ${rhythm(0.1)};

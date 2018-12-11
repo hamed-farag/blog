@@ -14,6 +14,10 @@ export const dark = {
     color: 'rgba(255,255,255, 0.5)',
     border: 'rgba(255,255,255,0.3)',
   },
+  bio: {
+    textColor: '#fff',
+    backgroundColor: '#1d2731',
+  },
 };
 
 export const light = {
@@ -24,6 +28,11 @@ export const light = {
   blockquote: {
     color: 'rgba(0,0,0,0.5)',
     border: 'rgba(0,0,0,0.3)',
+  },
+
+  bio: {
+    textColor: '#000',
+    backgroundColor: '#EEEEEE',
   },
 };
 
