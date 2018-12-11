@@ -2,8 +2,9 @@ import React from 'react';
 import { Link } from 'gatsby';
 import { ThemeProvider } from 'styled-components';
 
-import { Header, Body, Container } from './ui';
+import { Header, Body, Container, Title, Control } from './ui';
 import { GlobalStyle, dark, light, themes } from './themes';
+import themeIcon from '../../assets/images/theme.png';
 
 import PoweredBy from '../../components/shared/PoweredBy';
 
@@ -35,11 +36,17 @@ class MainLayout extends React.Component {
         <React.Fragment>
           <GlobalStyle />
           <Header>
-            <h2>
-              <Link to={'/'}>{title}</Link>
-            </h2>
-            <span>beta</span>
-            <button onClick={() => this.onThemeChange()}>theme</button>
+            <Title>
+              <h2>
+                <Link to={'/'}>{title}</Link>
+              </h2>
+              <span>beta</span>
+            </Title>
+            <Control>
+              <a onClick={() => this.onThemeChange()}>
+                <img src={themeIcon} />
+              </a>
+            </Control>
           </Header>
           <Container>
             <Body>{children}</Body>
