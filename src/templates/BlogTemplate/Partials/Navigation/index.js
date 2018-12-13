@@ -12,6 +12,7 @@ export default function(props) {
         justifyContent: 'space-between',
         listStyle: 'none',
         padding: 0,
+        magin: 0, 
       }}
     >
       <li>
