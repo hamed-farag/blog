@@ -1,9 +1,12 @@
 module.exports = {
   siteMetadata: {
-    title: `Hamed's Blog`,
+    title: "Hamed's Blog",
     author: 'Hamed Farag',
-    description: 'Personal Blog Stuffed with Code',
-    siteUrl: 'https://hamed-farag.github.io/blog/',
+    description: 'Personal Technical Blog Stuffed with Code',
+    url: 'https://hamed-farag.github.io/blog/',
+    siteName: "Hamed's Technical Blog",
+    twitterUsername: '@hamed_farag',
+    keywords: ['front-end', 'javascript', 'technical', 'personal'],
   },
   pathPrefix: '/blog',
   plugins: [

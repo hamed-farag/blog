@@ -5,6 +5,7 @@ import { ThemeProvider } from 'styled-components';
 import { setLocalStorage, getLocalStorage } from '../../utils/storage';
 
 import PoweredBy from '../../components/shared/PoweredBy';
+import SEO from '../../components/shared/SEO';
 
 import { Header, Body, Container, Title, Control } from './ui';
 import { GlobalStyle, dark, light, themes } from './themes';
@@ -43,6 +44,7 @@ class MainLayout extends React.Component {
       <ThemeProvider theme={theme}>
         <React.Fragment>
           <GlobalStyle />
+          <SEO />
           <Header>
             <Title>
               <h2>

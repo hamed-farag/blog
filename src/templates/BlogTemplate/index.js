@@ -4,6 +4,7 @@ import { Link, graphql } from 'gatsby';
 import get from 'lodash/get';
 
 import Bio from '../../components/shared/Bio';
+import SEO from '../../components/shared/SEO';
 import MainLayout from '../../containers/MainLayout';
 import Head from './Partials/Head';
 import Foot from './Partials/Foot';
@@ -16,8 +17,6 @@ class BlogPostTemplate extends React.Component {
     const { location, pageContext, data } = this.props;
     const post = data.markdownRemark;
     const siteTitle = get(this.props, 'data.site.siteMetadata.title');
-    const siteDescription = post.excerpt;
-
     const {
       title,
       date,
@@ -29,11 +28,7 @@ class BlogPostTemplate extends React.Component {
 
     return (
       <MainLayout location={location} title={siteTitle}>
-        <Helmet
-          htmlAttributes={{ lang: 'en' }}
-          meta={[{ name: 'description', content: siteDescription }]}
-          title={`${post.frontmatter.title} | ${siteTitle}`}
-        />
+        <SEO title={title} description={subTitle} keywords={tags} />
         <BlogGlobalStyle />
         <Head
           metadate={{
