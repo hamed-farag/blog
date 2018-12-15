@@ -25,4 +25,5 @@ You can start your own blog by fork the repo and clean the following files
 * ./src/assets/favicon.png
 * ./src/assets/profile-pic.png
 * ./src/static/bio.md
+* Clean ./src/blogs from the blogs and start to write your own blogs.
 
