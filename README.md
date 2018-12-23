@@ -2,7 +2,7 @@
 
 # [Hamed's Blog](https://hamed-farag.github.io/blog/)
 
-Personal Blog Stuffed with Code
+Personal Blog Stuffed with Code powered by [GatsbyJS](https://www.gatsbyjs.org/)
 </p>
 
 ### Features Supported 
