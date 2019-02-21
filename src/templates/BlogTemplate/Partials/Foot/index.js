@@ -10,7 +10,7 @@ const renderTags = function(tags) {
   return tags.map((tag, index) => {
     return (
       <Tag key={index}>
-        <Link to={'/'}>{tag}</Link>
+        <span>{tag}</span>
       </Tag>
     );
   });

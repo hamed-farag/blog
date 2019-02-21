@@ -70,7 +70,7 @@ export const Tags = styled.ul`
 export const Tag = styled.li`
   float: left;
   font-size: ${rhythm(0.5)};
-  a {
+  span {
     background: #eee;
     border-radius: 3px 0 0 3px;
     color: #333;

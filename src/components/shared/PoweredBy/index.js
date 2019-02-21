@@ -15,7 +15,7 @@ export default function(props) {
 
   return (
     <PoweredBy>
-      Powered By <b>GatsbyJS</b> with custom development flavor using{' '}
+      Powered By <b>GatsbyJS</b> with a custom development flavor using{' '}
       <b>ReactJS</b> ♥
     </PoweredBy>
   );

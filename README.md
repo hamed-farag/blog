@@ -16,6 +16,7 @@ Personal Blog Stuffed with Code powered by [GatsbyJS](https://www.gatsbyjs.org/)
 * Filter by tag
 * Filter by category
 * Pagination
+* Related blogs
   
 
 You can start your own blog by fork the repo and clean the following files
