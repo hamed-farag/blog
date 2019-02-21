@@ -5,7 +5,7 @@ date: '2019-02-21T20:10:03.284Z'
 tags: blog, gatsby, javascript, static, content, techincal
 category: front-end
 readingTime: 2 min read
-discussionUrl: www
+discussionUrl: https://github.com/hamed-farag/blog/issues/1
 ---
 
 For a long period of time, I was searching for an engine to host and maintain my first technical blog, from a developer perspective you can imagine what am I searching for? I would like to find an engine that satisfies my technical desire, an engine that I can extend it, I can develop on top of it using the most lovely language in this planet, the ECMAScript aka Javascript.
@@ -33,3 +33,6 @@ Hamed Farag with you, a front-end engineer at ITWORX, worked with many different
 
 So you might expect to see in the future posts about front-end technologies and its ecosystem.
 
+
+
+[Leave your opinion, your comments](https://github.com/hamed-farag/blog/issues/1)
