@@ -11,4 +11,8 @@ export const Head = styled.div`
 export const Metadata = styled.div`
   margin-top: ${rhythm(0.5)};
   font-size: ${rhythm(0.6)};
+  a {
+    text-decoration: none;
+    color: ${props => props.theme.main.color};
+  }
 `;

@@ -4,7 +4,7 @@ subTitle: How i built my technical blog!
 date: '2019-02-21T20:10:03.284Z'
 tags: blog, gatsby, javascript, static, content, techincal
 category: front-end
-readingTime: 6 min read
+readingTime: 2 min read
 discussionUrl: www
 ---
 
