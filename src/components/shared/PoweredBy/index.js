@@ -11,12 +11,19 @@ export default function(props) {
     max-width: 56.875rem;
     margin-left: auto;
     margin-right: auto;
+    a {
+      text-decoration: none;
+      color: ${props => props.theme.bio.textColor};
+    }
   `;
 
   return (
     <PoweredBy>
-      Powered By <b>GatsbyJS</b> with a custom development flavor using{' '}
-      <b>ReactJS</b> ♥
+      Powered By <b>GatsbyJS</b> with a{' '}
+      <a href={props.repoUrl} target="_blank">
+        <b>custom development</b>
+      </a>{' '}
+      flavor using <b>ReactJS</b> ♥
     </PoweredBy>
   );
 }

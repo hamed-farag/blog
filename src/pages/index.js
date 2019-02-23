@@ -12,12 +12,17 @@ class BlogIndex extends React.Component {
     const siteTitle = get(this, 'props.data.site.siteMetadata.title');
     const siteDescription = get(
       this,
-      'props.data.site.siteMetadata.description',
+      'props.data.site.siteMetadata.description'
     );
+    const repoUrl = get(this, 'props.data.site.siteMetadata.repoUrl');
     const posts = get(this, 'props.data.allMarkdownRemark.edges');
 
     return (
-      <MainLayout location={this.props.location} title={siteTitle}>
+      <MainLayout
+        location={this.props.location}
+        title={siteTitle}
+        repoUrl={repoUrl}
+      >
         <Helmet
           htmlAttributes={{ lang: 'en' }}
           meta={[{ name: 'description', content: siteDescription }]}
@@ -55,6 +60,7 @@ export const pageQuery = graphql`
       siteMetadata {
         title
         description
+        repoUrl
       }
     }
     allMarkdownRemark(

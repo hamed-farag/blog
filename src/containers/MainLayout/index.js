@@ -36,7 +36,7 @@ class MainLayout extends React.Component {
   };
 
   render() {
-    const { children, title } = this.props;
+    const { children, title, repoUrl } = this.props;
 
     const theme = this.state.theme == themes.light ? light : dark;
 
@@ -60,7 +60,7 @@ class MainLayout extends React.Component {
           </Header>
           <Container>
             <Body>{children}</Body>
-            <PoweredBy />
+            <PoweredBy repoUrl={repoUrl} />
           </Container>
         </React.Fragment>
       </ThemeProvider>

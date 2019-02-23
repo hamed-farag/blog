@@ -8,6 +8,7 @@ module.exports = {
     author: 'Hamed Farag',
     description: 'Personal Technical Blog Stuffed with Code',
     siteUrl: 'https://hamed-farag.github.io/blog/',
+    repoUrl: 'https://github.com/hamed-farag/blog',
     siteName: "Hamed's Technical Blog",
     twitterUsername: '@hamed_farag',
     keywords: ['front-end', 'javascript', 'technical', 'personal'],
