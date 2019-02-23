@@ -18,6 +18,8 @@ Personal Blog Stuffed with Code powered by [GatsbyJS](https://www.gatsbyjs.org/)
 * Pagination
 * Related blogs
   
+### Notes
+You can create .env.development & .env.production and write down your values like .env.example
 
 You can start your own blog by fork the repo and clean the following files
 * ./Readme.md

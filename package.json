@@ -29,6 +29,7 @@
     "start": "npm run develop",
     "prebuild": "rmdir /Q /S public && mkdir public",
     "build": "npm run prebuild && gatsby build",
+    "build:test": "npm run prebuild && gatsby build && gatsby serve",
     "deploy": "npm run prebuild && gatsby build --prefix-paths && gh-pages -d public",
     "fix-semi": "eslint --quiet --ignore-pattern node_modules --ignore-pattern public --parser babel-eslint --no-eslintrc --rule '{\"semi\": [2, \"never\"], \"no-extra-semi\": [2]}' --fix gatsby-node.js"
   },
@@ -65,6 +66,7 @@
     "typography-theme-github": "^0.15.10"
   },
   "devDependencies": {
+    "dotenv": "^6.2.0",
     "eslint": "^4.19.1",
     "eslint-plugin-react": "^7.11.1",
     "gh-pages": "^1.2.0",
