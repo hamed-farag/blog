@@ -21,7 +21,6 @@ class BlogPostTemplate extends React.Component {
     const {
       id,
       title,
-      shortTitle,
       date,
       readingTime,
       subTitle,
@@ -57,7 +56,10 @@ class BlogPostTemplate extends React.Component {
           }}
         />
         <Navigation pageContext={pageContext} />
-        <DiscussionEmbed shortname={shortTitle} config={disqusConfig} />
+        <DiscussionEmbed
+          shortname={process.env.disqus_shortname}
+          config={disqusConfig}
+        />
         <Bio />
       </MainLayout>
     );

@@ -1,7 +1,6 @@
 ---
 id: a92412bb-d561-483e-b79b-14726a5bccb1
 title: My Blog - My Gatsby!
-shortTitle: MyBlog_MyGatsby
 subTitle: How i built my technical blog!
 date: '2019-02-21T20:10:03.284Z'
 tags: blog, gatsby, javascript, static, content, techincal
