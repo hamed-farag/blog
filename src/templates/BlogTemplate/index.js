@@ -1,6 +1,6 @@
 import React from 'react';
-import Helmet from 'react-helmet';
-import { Link, graphql } from 'gatsby';
+import { graphql } from 'gatsby';
+import { DiscussionEmbed } from 'disqus-react';
 import get from 'lodash/get';
 
 import Bio from '../../components/shared/Bio';
@@ -17,8 +17,11 @@ class BlogPostTemplate extends React.Component {
     const { location, pageContext, data } = this.props;
     const post = data.markdownRemark;
     const siteTitle = get(this.props, 'data.site.siteMetadata.title');
+    const repoUrl = get(this.props, 'data.site.siteMetadata.repoUrl');
     const {
+      id,
       title,
+      shortTitle,
       date,
       readingTime,
       subTitle,
@@ -26,8 +29,14 @@ class BlogPostTemplate extends React.Component {
       category,
     } = post.frontmatter;
 
+    const disqusConfig = {
+      url: location.href,
+      identifier: id,
+      title: title,
+    };
+
     return (
-      <MainLayout location={location} title={siteTitle}>
+      <MainLayout title={siteTitle} repoUrl={repoUrl}>
         <SEO title={title} description={subTitle} keywords={tags} />
         <BlogGlobalStyle />
         <Head
@@ -47,8 +56,9 @@ class BlogPostTemplate extends React.Component {
             url: location.href,
           }}
         />
-        <Bio />
         <Navigation pageContext={pageContext} />
+        <DiscussionEmbed shortname={shortTitle} config={disqusConfig} />
+        <Bio />
       </MainLayout>
     );
   }
@@ -62,6 +72,7 @@ export const pageQuery = graphql`
       siteMetadata {
         title
         author
+        repoUrl
       }
     }
     markdownRemark(fields: { slug: { eq: $slug } }) {

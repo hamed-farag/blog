@@ -1,5 +1,7 @@
 ---
+id: a92412bb-d561-483e-b79b-14726a5bccb1
 title: My Blog - My Gatsby!
+shortTitle: MyBlog_MyGatsby
 subTitle: How i built my technical blog!
 date: '2019-02-21T20:10:03.284Z'
 tags: blog, gatsby, javascript, static, content, techincal
@@ -32,7 +34,3 @@ Gatsby is a static site generator, believe or not you can build a website in jus
 Hamed Farag with you, a front-end engineer at ITWORX, worked with many different technologies starting from .Net Web Forms, .Net MVC, SQL Server, Sharepoint 2010, knockout, AngularJS to ReactJS, Redux, SASS, styled-components.
 
 So you might expect to see in the future posts about front-end technologies and its ecosystem.
-
-
-
-[Leave your opinion, your comments](https://github.com/hamed-farag/blog/issues/1)
