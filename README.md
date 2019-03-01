@@ -5,7 +5,7 @@
 Personal Blog Stuffed with Code powered by [GatsbyJS](https://www.gatsbyjs.org/)
 </p>
 
-### Features Supported 
+### Features 
 * Dark/Light Theme
 * SEO
 * Based on Styled-Components
@@ -19,14 +19,17 @@ Personal Blog Stuffed with Code powered by [GatsbyJS](https://www.gatsbyjs.org/)
 * Related blogs
   
 ### Notes
-You can create .env.development & .env.production and write down your values like .env.example
 
 You can start your own blog by fork the repo and clean the following files
 * ./Readme.md
-* ./gatsby-config.js
 * ./package.json
 * ./src/assets/favicon.png
 * ./src/assets/profile-pic.png
 * ./src/static/bio.md
-* Clean ./src/blogs from the blogs and start to write your own blogs.
+* ./src/blogs folder and start to write your own blogs.
 
+Create .env.development & .env.production and write down your values like .env.example
+
+### Articles
+* [My Blog - My Gatsby!](https://hamed-farag.github.io/blog/gatsby-blog/)
+  

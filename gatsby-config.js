@@ -4,14 +4,12 @@ require('dotenv').config({
 
 module.exports = {
   siteMetadata: {
-    title: "Hamed's Blog",
-    author: 'Hamed Farag',
-    description: 'Personal Technical Blog Stuffed with Code',
-    siteUrl: 'https://hamed-farag.github.io/blog/',
-    repoUrl: 'https://github.com/hamed-farag/blog',
-    siteName: "Hamed's Technical Blog",
-    twitterUsername: '@hamed_farag',
-    keywords: ['front-end', 'javascript', 'technical', 'personal'],
+    title: process.env.blog_title,
+    author: process.env.blog_author,
+    description: process.env.blog_description,
+    repoUrl: process.env.blog_repoUrl,
+    twitterUsername: process.env.blog_twitterUsername,
+    keywords: process.env.blog_keywords,
   },
   pathPrefix: '/blog',
   plugins: [
