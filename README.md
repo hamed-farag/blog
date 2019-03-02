@@ -32,4 +32,5 @@ Create .env.development & .env.production and write down your values like .env.e
 
 ### Articles
 * [My Blog - My Gatsby!](https://hamed-farag.github.io/blog/gatsby-blog/)
+* [Build Your Front-End Environment - Part 1](https://hamed-farag.github.io/blog/front-end-env-p1/)
   
