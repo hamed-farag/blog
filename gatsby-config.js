@@ -10,6 +10,7 @@ module.exports = {
     repoUrl: process.env.blog_repoUrl,
     twitterUsername: process.env.blog_twitterUsername,
     keywords: process.env.blog_keywords,
+    siteUrl: process.env.blog_siteUrl,
   },
   pathPrefix: '/blog',
   plugins: [

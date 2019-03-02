@@ -320,6 +320,8 @@ Of course you need to install Google chrome to use this DevTools.
     <img src="./assets/Chrome-DevTools.png" alt="Chrome DevTools" title="Chrome DevTools"/>
 </div>
 
+<br/>
+<br/>
 
 ### Tips and Tricks 
 
