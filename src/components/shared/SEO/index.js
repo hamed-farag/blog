@@ -25,7 +25,7 @@ const SEO = props => {
 SEO.propTypes = {
   title: PropTypes.string,
   description: PropTypes.string,
-  keywords: PropTypes.array,
+  keywords: PropTypes.string,
 };
 
 export default props => {
