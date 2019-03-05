@@ -8,7 +8,7 @@ import SEO from '../../components/shared/SEO';
 import MainLayout from '../../containers/MainLayout';
 import Head from './Partials/Head';
 import Foot from './Partials/Foot';
-import { Body, BlogGlobalStyle } from './ui';
+import { Body, Blog, Post } from './ui';
 
 import Navigation from './Partials/Navigation';
 
@@ -36,31 +36,34 @@ class BlogPostTemplate extends React.Component {
 
     return (
       <MainLayout title={siteTitle} repoUrl={repoUrl}>
-        <SEO title={title} description={subTitle} keywords={tags} />
-        <BlogGlobalStyle />
-        <Head
-          metadate={{
-            title,
-            date,
-            readingTime,
-            subTitle,
-            category,
-          }}
-        />
-        <Body dangerouslySetInnerHTML={{ __html: post.html }} />
-        <Foot
-          metadate={{
-            title,
-            tags,
-            url: location.href,
-          }}
-        />
-        <Navigation pageContext={pageContext} />
-        <DiscussionEmbed
-          shortname={process.env.disqus_shortname}
-          config={disqusConfig}
-        />
-        <Bio />
+        <Blog>
+          <Post>
+            <SEO title={title} description={subTitle} keywords={tags} />
+            <Head
+              metadate={{
+                title,
+                date,
+                readingTime,
+                subTitle,
+                category,
+              }}
+            />
+            <Body dangerouslySetInnerHTML={{ __html: post.html }} />
+            <Foot
+              metadate={{
+                title,
+                tags,
+                url: location.href,
+              }}
+            />
+          </Post>
+          <Navigation pageContext={pageContext} />
+          <DiscussionEmbed
+            shortname={process.env.disqus_shortname}
+            config={disqusConfig}
+          />
+          <Bio />
+        </Blog>
       </MainLayout>
     );
   }

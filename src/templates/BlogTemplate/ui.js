@@ -1,16 +1,19 @@
-import styled, { createGlobalStyle } from 'styled-components';
+import styled from 'styled-components';
 
 import { rhythm, lineColor } from '../../utils/typography';
 
-export const BlogGlobalStyle = createGlobalStyle`
-  blockquote {
-    color: ${props => props.theme.blockquote.color};
-    border-left: 4px solid ${props => props.theme.blockquote.border};
-  }
+export const Blog = styled.div``;
+
+export const Post = styled.div`
+  background-color: ${props => props.theme.main.secondaryBGColor};
+  box-shadow: 0px 0px 10px ${props => props.theme.main.shadowColor};
+  padding: 15px;
+  border-radius: 2px;
+  border-top: 5px solid ${props => props.theme.blog.post.borderColor};
 `;
 
 export const Body = styled.div`
-  margin: ${rhythm(1)} 0;
+  margin: ${rhythm(0.8)} 0;
   padding: ${rhythm(1)} ${rhythm(0.5)};
   border-top: 1px solid ${lineColor};
   border-bottom: 1px solid ${lineColor};
@@ -94,7 +97,7 @@ export const Tag = styled.li`
       top: 10px;
     }
     &:after {
-      background: ${props => props.theme.main.backgroundColor};
+      background: ${props => props.theme.main.primaryBGColor};
       border-bottom: 13px solid transparent;
       border-left: 10px solid #eee;
       border-top: 13px solid transparent;
