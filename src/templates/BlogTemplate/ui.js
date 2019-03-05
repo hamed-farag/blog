@@ -19,6 +19,13 @@ export const Body = styled.div`
   border-bottom: 1px solid ${lineColor};
 `;
 
+export const Discussion = styled.div`
+  background-color: ${props => props.theme.main.secondaryBGColor};
+  box-shadow: 0px 0px 10px ${props => props.theme.main.shadowColor};
+  padding: 15px;
+  border-radius: 2px;
+`;
+
 export const Foot = styled.div`
   display: -webkit-box;
   display: -webkit-flex;

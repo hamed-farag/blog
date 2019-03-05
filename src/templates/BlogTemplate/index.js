@@ -8,7 +8,7 @@ import SEO from '../../components/shared/SEO';
 import MainLayout from '../../containers/MainLayout';
 import Head from './Partials/Head';
 import Foot from './Partials/Foot';
-import { Body, Blog, Post } from './ui';
+import { Body, Blog, Post, Discussion } from './ui';
 
 import Navigation from './Partials/Navigation';
 
@@ -58,10 +58,12 @@ class BlogPostTemplate extends React.Component {
             />
           </Post>
           <Navigation pageContext={pageContext} />
-          <DiscussionEmbed
-            shortname={process.env.disqus_shortname}
-            config={disqusConfig}
-          />
+          <Discussion>
+            <DiscussionEmbed
+              shortname={process.env.disqus_shortname}
+              config={disqusConfig}
+            />
+          </Discussion>
           <Bio />
         </Blog>
       </MainLayout>
