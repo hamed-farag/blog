@@ -23,6 +23,7 @@ export const Metadata = styled.span`
 
 export const Post = styled.div`
   display: inline-block;
+  margin: 0 0 10px 0;
   max-width: 100%;
   text-align: left;
   padding: 10px;
