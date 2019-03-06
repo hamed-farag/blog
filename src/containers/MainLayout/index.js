@@ -7,7 +7,15 @@ import { setLocalStorage, getLocalStorage } from '../../utils/storage';
 import PoweredBy from '../../components/shared/PoweredBy';
 import SEO from '../../components/shared/SEO';
 
-import { Header, InnerHeader, Body, Container, Title, Control } from './ui';
+import {
+  Header,
+  InnerHeader,
+  Body,
+  Container,
+  Title,
+  Control,
+  Beta,
+} from './ui';
 import { GlobalStyle, dark, light, themes } from './themes';
 
 import themeIcon from '../../assets/images/theme.png';
@@ -51,7 +59,7 @@ class MainLayout extends React.Component {
                 <h2>
                   <Link to={'/'}>{title}</Link>
                 </h2>
-                <span>beta</span>
+                <Beta>BETA</Beta>
               </Title>
               <Control>
                 <a onClick={() => this.onThemeChange()}>

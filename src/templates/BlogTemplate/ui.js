@@ -7,7 +7,7 @@ export const Blog = styled.div``;
 export const Post = styled.div`
   background-color: ${props => props.theme.main.secondaryBGColor};
   box-shadow: 0px 0px 10px ${props => props.theme.main.shadowColor};
-  padding: 15px;
+  padding: ${rhythm(0.5)};
   border-radius: 2px;
   border-top: 5px solid ${props => props.theme.blog.post.borderColor};
 `;
@@ -22,7 +22,7 @@ export const Body = styled.div`
 export const Discussion = styled.div`
   background-color: ${props => props.theme.main.secondaryBGColor};
   box-shadow: 0px 0px 10px ${props => props.theme.main.shadowColor};
-  padding: 15px;
+  padding: ${rhythm(0.5)} ${rhythm(0.5)} 0px ${rhythm(0.5)};
   border-radius: 2px;
 `;
 

@@ -3,9 +3,11 @@ import styled from 'styled-components';
 import { rhythm } from '../../utils/typography';
 
 export const Header = styled.div`
-  margin-bottom: ${rhythm(1)};
   box-shadow: 0px 1px 5px ${props => props.theme.main.shadowColor};
   background-color: ${props => props.theme.main.secondaryBGColor};
+  @media (min-width: 576px) {
+    margin-bottom: ${rhythm(1)};
+  }
 `;
 
 export const InnerHeader = styled.div`
@@ -16,7 +18,7 @@ export const InnerHeader = styled.div`
   max-width: ${rhythm(35)};
   margin-left: auto;
   margin-right: auto;
-  padding: ${rhythm(0.8)} 0;
+  padding: ${rhythm(0.8)} ${rhythm(0.5)};
 `;
 
 export const Title = styled.div`
@@ -68,4 +70,16 @@ export const Body = styled.div`
   margin-left: auto;
   margin-right: auto;
   max-width: ${rhythm(30)};
+`;
+
+export const Beta = styled.span`
+  background-color: red;
+  font-size: 12px;
+  font-weight: bold;
+  line-height: 1.1;
+  height: 22px;
+  padding: 5px;
+  border-radius: 3px;
+  margin-left: 5px;
+  margin-top: -5px;
 `;
