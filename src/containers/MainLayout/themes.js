@@ -66,7 +66,7 @@ export const GlobalStyle = createGlobalStyle`
     background-color: ${props => props.theme.code.backgroundColor};
     padding: 10px;
     border: 1px solid ${props => props.theme.code.borderColor};
-    border-radius: 5px;
+    border-radius: 3px;
     overflow: auto;
   }
   blockquote {
@@ -78,7 +78,7 @@ export const GlobalStyle = createGlobalStyle`
       background-color: ${props => props.theme.code.backgroundColor};
       padding: 1px;
       border: 1px solid ${props => props.theme.code.borderColor};
-      border-radius: 5px;
+      border-radius: 3x;
     }
   }
 `;

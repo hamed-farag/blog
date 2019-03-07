@@ -24,13 +24,17 @@ export const Metadata = styled.span`
 export const Post = styled.div`
   display: inline-block;
   margin: 0 0 10px 0;
-  max-width: 100%;
+  width: 100%;
   text-align: left;
   padding: 10px;
   background-color: ${props => props.theme.main.secondaryBGColor};
   border-top: 5px solid ${props => props.theme.blog.post.borderColor};
   box-shadow: 0px 1px 5px ${props => props.theme.main.shadowColor};
   border-radius: 3px;
+  transition: transform 0.2s;
+  &:hover {
+    transform: scale(1);
+  }
   h3 {
     margin: 10px 0;
   }
@@ -42,8 +46,11 @@ export const Post = styled.div`
     margin: 0;
   }
   @media (min-width: 576px) {
-    max-width: calc(100% / 2 - 20px);
+    width: calc(100% / 2 - 20px);
     text-align: center;
     margin: 10px;
+    &:hover {
+      transform: scale(1.025);
+    }
   }
 `;
