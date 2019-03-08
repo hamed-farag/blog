@@ -2,10 +2,13 @@ import React from 'react';
 import { Link, graphql } from 'gatsby';
 import get from 'lodash/get';
 import Helmet from 'react-helmet';
+import { FaCalendarAlt, FaTag } from 'react-icons/fa';
 
 import Bio from '../components/shared/Bio';
 import MainLayout from '../containers/MainLayout';
 import { rhythm } from '../utils/typography';
+
+import { Metadata, Page, PostContainer, Post } from './ui';
 
 class BlogIndex extends React.Component {
   render() {
@@ -24,25 +27,42 @@ class BlogIndex extends React.Component {
           meta={[{ name: 'description', content: siteDescription }]}
           title={siteTitle}
         />
-        <Bio />
-        {posts.map(({ node }) => {
-          const title = get(node, 'frontmatter.title') || node.fields.slug;
-          return (
-            <div key={node.fields.slug}>
-              <h3
-                style={{
-                  marginBottom: rhythm(1 / 4),
-                }}
-              >
+        <Page>
+          <Bio />
+          <PostContainer>
+            {posts.map(({ node }) => {
+              const title = get(node, 'frontmatter.title') || node.fields.slug;
+              return (
                 <Link style={{ boxShadow: 'none' }} to={node.fields.slug}>
-                  {title}
+                  <Post key={node.fields.slug}>
+                    <h3
+                      style={{
+                        marginBottom: rhythm(1 / 4),
+                      }}
+                    >
+                      {title}
+                    </h3>
+                    <small>
+                      <Metadata>
+                        <span>
+                          <FaCalendarAlt />
+                        </span>
+                        {node.frontmatter.date}
+                      </Metadata>
+                      <Metadata>
+                        <span>
+                          <FaTag />
+                        </span>
+                        {node.frontmatter.category}
+                      </Metadata>
+                    </small>
+                    <p dangerouslySetInnerHTML={{ __html: node.excerpt }} />
+                  </Post>
                 </Link>
-              </h3>
-              <small>{node.frontmatter.date}</small>
-              <p dangerouslySetInnerHTML={{ __html: node.excerpt }} />
-            </div>
-          );
-        })}
+              );
+            })}
+          </PostContainer>
+        </Page>
       </MainLayout>
     );
   }
@@ -71,6 +91,7 @@ export const pageQuery = graphql`
           frontmatter {
             date(formatString: "MMMM DD, YYYY")
             title
+            category
           }
         }
       }

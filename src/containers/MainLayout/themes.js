@@ -8,7 +8,14 @@ export const themes = {
 export const dark = {
   main: {
     color: '#fff',
-    backgroundColor: '#10171E',
+    primaryBGColor: '#10171E',
+    secondaryBGColor: '#1C2938',
+    shadowColor: '#111010',
+  },
+  blog: {
+    post: {
+      borderColor: '#2D608B',
+    },
   },
   blockquote: {
     color: 'rgba(255,255,255, 0.5)',
@@ -27,13 +34,19 @@ export const dark = {
 export const light = {
   main: {
     color: '#000',
-    backgroundColor: '#fff',
+    primaryBGColor: '#F0F0F0',
+    secondaryBGColor: '#ffffff',
+    shadowColor: '#cccccc',
+  },
+  blog: {
+    post: {
+      borderColor: '#8d8d8d',
+    },
   },
   blockquote: {
     color: 'rgba(0,0,0,0.5)',
     border: 'rgba(0,0,0,0.3)',
   },
-
   bio: {
     textColor: '#000',
     backgroundColor: '#EEEEEE',
@@ -47,20 +60,25 @@ export const light = {
 export const GlobalStyle = createGlobalStyle`
   body {
     color: ${props => props.theme.main.color};
-    background-color: ${props => props.theme.main.backgroundColor};
+    background-color: ${props => props.theme.main.primaryBGColor};
   }
   pre {
     background-color: ${props => props.theme.code.backgroundColor};
     padding: 10px;
     border: 1px solid ${props => props.theme.code.borderColor};
-    border-radius: 5px;
+    border-radius: 3px;
+    overflow: auto;
+  }
+  blockquote {
+    color: ${props => props.theme.blockquote.color};
+    border-left: 4px solid ${props => props.theme.blockquote.border};
   }
   p{
     code {
       background-color: ${props => props.theme.code.backgroundColor};
       padding: 1px;
       border: 1px solid ${props => props.theme.code.borderColor};
-      border-radius: 5px;
+      border-radius: 3x;
     }
   }
 `;

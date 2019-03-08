@@ -2,14 +2,14 @@ import React from 'react';
 import { Link } from 'gatsby';
 import { TwitterShareButton, TwitterIcon } from 'react-share';
 
-import { Foot, Tags, Tag, Share } from '../../ui';
+import { cssHSL } from '../../../../utils/color';
 
-import { rhythm, scale } from '../../../../utils/typography';
+import { Foot, Tags, Tag, Share } from '../../ui';
 
 const renderTags = function(tags) {
   return tags.map((tag, index) => {
     return (
-      <Tag key={index}>
+      <Tag key={index} style={{ background: cssHSL() }}>
         <span>{tag}</span>
       </Tag>
     );

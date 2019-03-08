@@ -1,8 +1,16 @@
 import styled from 'styled-components';
 
-import { rhythm, lineColor } from '../../utils/typography';
+import { rhythm } from '../../utils/typography';
 
 export const Header = styled.div`
+  box-shadow: 0px 1px 5px ${props => props.theme.main.shadowColor};
+  background-color: ${props => props.theme.main.secondaryBGColor};
+  @media (min-width: 576px) {
+    margin-bottom: ${rhythm(1)};
+  }
+`;
+
+export const InnerHeader = styled.div`
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -10,9 +18,7 @@ export const Header = styled.div`
   max-width: ${rhythm(35)};
   margin-left: auto;
   margin-right: auto;
-  border-bottom: 1px solid ${lineColor};
-  margin-bottom: ${rhythm(1)};
-  padding: ${rhythm(1)} 0;
+  padding: ${rhythm(0.8)} ${rhythm(0.5)};
 `;
 
 export const Title = styled.div`
@@ -25,7 +31,8 @@ export const Title = styled.div`
   -ms-flex: 1 1 auto;
   flex: 1 1 auto;
   h2 {
-    display: inline-block;
+    margin: 0;
+    padding: 0;
     a {
       box-shadow: none;
       text-decoration: none;
@@ -53,14 +60,27 @@ export const Control = styled.div`
   }
 `;
 
+export const Container = styled.div`
+  margin-left: auto;
+  margin-right: auto;
+  max-width: ${rhythm(40)};
+`;
+
 export const Body = styled.div`
   margin-left: auto;
   margin-right: auto;
   max-width: ${rhythm(30)};
 `;
 
-export const Container = styled.div`
-  margin-left: auto;
-  margin-right: auto;
-  max-width: ${rhythm(40)};
+export const Beta = styled.span`
+  background-color: red;
+  color: #fff;
+  font-size: 12px;
+  font-weight: bold;
+  line-height: 1.1;
+  height: 22px;
+  padding: 5px;
+  border-radius: 3px;
+  margin-left: 5px;
+  margin-top: -5px;
 `;
