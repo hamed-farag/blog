@@ -29,6 +29,13 @@ export const Metadata = styled.span`
   }
 `;
 
+export const PostContainer = styled.div`
+  margin: 0;
+  @media (min-width: 576px) {
+    margin: 0 -10px;
+  }
+`;
+
 export const Post = styled.div`
   display: inline-block;
   margin: 0 0 10px 0;

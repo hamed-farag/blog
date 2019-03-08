@@ -25,6 +25,5 @@ export const Biography = styled.div`
   @media (min-width: 576px) {
     display: flex;
     text-align: left;
-    margin: ${rhythm(1)} 10px;
   }
 `;

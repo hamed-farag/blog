@@ -8,7 +8,7 @@ import Bio from '../components/shared/Bio';
 import MainLayout from '../containers/MainLayout';
 import { rhythm } from '../utils/typography';
 
-import { Metadata, Page, Post } from './ui';
+import { Metadata, Page, PostContainer, Post } from './ui';
 
 class BlogIndex extends React.Component {
   render() {
@@ -29,37 +29,39 @@ class BlogIndex extends React.Component {
         />
         <Page>
           <Bio />
-          {posts.map(({ node }) => {
-            const title = get(node, 'frontmatter.title') || node.fields.slug;
-            return (
-              <Link style={{ boxShadow: 'none' }} to={node.fields.slug}>
-                <Post key={node.fields.slug}>
-                  <h3
-                    style={{
-                      marginBottom: rhythm(1 / 4),
-                    }}
-                  >
-                    {title}
-                  </h3>
-                  <small>
-                    <Metadata>
-                      <span>
-                        <FaCalendarAlt />
-                      </span>
-                      {node.frontmatter.date}
-                    </Metadata>
-                    <Metadata>
-                      <span>
-                        <FaTag />
-                      </span>
-                      {node.frontmatter.category}
-                    </Metadata>
-                  </small>
-                  <p dangerouslySetInnerHTML={{ __html: node.excerpt }} />
-                </Post>
-              </Link>
-            );
-          })}
+          <PostContainer>
+            {posts.map(({ node }) => {
+              const title = get(node, 'frontmatter.title') || node.fields.slug;
+              return (
+                <Link style={{ boxShadow: 'none' }} to={node.fields.slug}>
+                  <Post key={node.fields.slug}>
+                    <h3
+                      style={{
+                        marginBottom: rhythm(1 / 4),
+                      }}
+                    >
+                      {title}
+                    </h3>
+                    <small>
+                      <Metadata>
+                        <span>
+                          <FaCalendarAlt />
+                        </span>
+                        {node.frontmatter.date}
+                      </Metadata>
+                      <Metadata>
+                        <span>
+                          <FaTag />
+                        </span>
+                        {node.frontmatter.category}
+                      </Metadata>
+                    </small>
+                    <p dangerouslySetInnerHTML={{ __html: node.excerpt }} />
+                  </Post>
+                </Link>
+              );
+            })}
+          </PostContainer>
         </Page>
       </MainLayout>
     );
