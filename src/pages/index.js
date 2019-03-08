@@ -8,7 +8,7 @@ import Bio from '../components/shared/Bio';
 import MainLayout from '../containers/MainLayout';
 import { rhythm } from '../utils/typography';
 
-import { Metadata, Page, PostContainer, Post } from './ui';
+import { Metadata, Page, PostContainer, Post } from '../styles/pages';
 
 class BlogIndex extends React.Component {
   render() {
