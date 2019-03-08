@@ -74,6 +74,7 @@ export const Body = styled.div`
 
 export const Beta = styled.span`
   background-color: red;
+  color: #fff;
   font-size: 12px;
   font-weight: bold;
   line-height: 1.1;

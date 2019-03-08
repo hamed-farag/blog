@@ -78,40 +78,18 @@ export const Tags = styled.ul`
 `;
 
 export const Tag = styled.li`
-  float: left;
+  display: inline-block;
+  border-radius: 3px;
+  font-weight: 600;
+  padding: 3px 10px;
+  margin: 0 5px;
   font-size: ${rhythm(0.5)};
   span {
-    background: #eee;
-    border-radius: 3px 0 0 3px;
-    color: #333;
+    border-radius: 3px;
+    color: #000;
     display: inline-block;
     height: 26px;
     line-height: 26px;
-    padding: 0 20px 0 23px;
-    position: relative;
-    margin: 0 10px 0 0;
     text-decoration: none;
-    -webkit-transition: color 0.2s;
-    &:before {
-      background: #ccc;
-      border-radius: 10px;
-      box-shadow: inset 0 1px rgba(0, 0, 0, 0.25);
-      content: '';
-      height: 6px;
-      left: 10px;
-      position: absolute;
-      width: 6px;
-      top: 10px;
-    }
-    &:after {
-      background: ${props => props.theme.main.primaryBGColor};
-      border-bottom: 13px solid transparent;
-      border-left: 10px solid #eee;
-      border-top: 13px solid transparent;
-      content: '';
-      position: absolute;
-      right: 0;
-      top: 0;
-    }
   }
 `;
