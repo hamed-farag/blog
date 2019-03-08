@@ -25,12 +25,13 @@
     "lint": "./node_modules/.bin/eslint --ext .js,.jsx --ignore-pattern public .",
     "test": "echo \"Error: no test specified\" && exit 1",
     "format": "prettier --trailing-comma es5 --no-semi --single-quote --write 'src/**/*.js' 'src/**/*.md'",
-    "develop": "gatsby develop",
+    "develop": "gatsby develop --no-cache",
     "start": "npm run develop",
     "prebuild": "rmdir /Q /S public && mkdir public",
-    "build": "npm run prebuild && gatsby build",
-    "build:test": "npm run prebuild && gatsby build && gatsby serve",
-    "deploy": "npm run prebuild && gatsby build --prefix-paths && gh-pages -d public",
+    "clear-cache": "rm -r ./.cache/*",
+    "build": "npm run clear-cache && npm run prebuild && gatsby build",
+    "build:test": "npm run clear-cache && npm run prebuild && gatsby build && gatsby serve",
+    "deploy": "npm run clear-cache && npm run prebuild && gatsby build --prefix-paths && gh-pages -d public",
     "fix-semi": "eslint --quiet --ignore-pattern node_modules --ignore-pattern public --parser babel-eslint --no-eslintrc --rule '{\"semi\": [2, \"never\"], \"no-extra-semi\": [2]}' --fix gatsby-node.js"
   },
   "dependencies": {
