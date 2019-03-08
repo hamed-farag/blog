@@ -1,6 +1,14 @@
-import styled from 'styled-components';
+import styled, { css } from 'styled-components';
 
 import { rhythm } from '../utils/typography';
+
+const transformScale = size => css`
+  -webkit-transform: scale(${size});
+  -moz-transform: scale(${size});
+  -ms-transform: scale(${size});
+  -o-transform: scale(${size});
+  transform: scale(${size});
+`;
 
 export const Page = styled.div`
   padding: 0 ${rhythm(0.5)};
@@ -33,7 +41,7 @@ export const Post = styled.div`
   border-radius: 3px;
   transition: transform 0.2s;
   &:hover {
-    transform: scale(1);
+    ${transformScale(1)};
   }
   h3 {
     margin: 10px 0;
@@ -50,7 +58,7 @@ export const Post = styled.div`
     text-align: center;
     margin: 10px;
     &:hover {
-      transform: scale(1.025);
+      ${transformScale(1.012)};
     }
   }
 `;
