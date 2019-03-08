@@ -19,11 +19,19 @@ export default function(props) {
 
   return (
     <PoweredBy>
-      Powered By <b>GatsbyJS</b> with a{' '}
+      Powered By{' '}
+      <a href="https://www.gatsbyjs.org/" target="_blank" alt="gatsby js">
+        <b>GatsbyJS</b>
+      </a>{' '}
+      with a{' '}
       <a href={props.repoUrl} target="_blank">
         <b>custom development</b>
       </a>{' '}
-      flavor using <b>ReactJS</b> ♥
+      flavor using{' '}
+      <a href="https://reactjs.org/" target="_blank" alt="react js">
+        <b>ReactJS</b>
+      </a>{' '}
+      💖
     </PoweredBy>
   );
 }
