@@ -82,7 +82,7 @@ export const Tag = styled.li`
   border-radius: 3px;
   font-weight: 600;
   padding: 3px 10px;
-  margin: 0 5px;
+  margin: 0 5px 10px;
   font-size: ${rhythm(0.5)};
   span {
     border-radius: 3px;
