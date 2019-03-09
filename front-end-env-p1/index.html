@@ -1,0 +1,409 @@
+<!DOCTYPE html><html lang="en"><head><meta charSet="utf-8"/><meta http-equiv="x-ua-compatible" content="ie=edge"/><meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no"/><style id="typography.js">html{font-family:sans-serif;-ms-text-size-adjust:100%;-webkit-text-size-adjust:100%}body{margin:0}article,aside,details,figcaption,figure,footer,header,main,menu,nav,section,summary{display:block}audio,canvas,progress,video{display:inline-block}audio:not([controls]){display:none;height:0}progress{vertical-align:baseline}[hidden],template{display:none}a{background-color:transparent;-webkit-text-decoration-skip:objects}a:active,a:hover{outline-width:0}abbr[title]{border-bottom:none;text-decoration:underline;text-decoration:underline dotted}b,strong{font-weight:inherit;font-weight:bolder}dfn{font-style:italic}h1{font-size:2em;margin:.67em 0}mark{background-color:#ff0;color:#000}small{font-size:80%}sub,sup{font-size:75%;line-height:0;position:relative;vertical-align:baseline}sub{bottom:-.25em}sup{top:-.5em}img{border-style:none}svg:not(:root){overflow:hidden}code,kbd,pre,samp{font-family:monospace,monospace;font-size:1em}figure{margin:1em 40px}hr{box-sizing:content-box;height:0;overflow:visible}button,input,optgroup,select,textarea{font:inherit;margin:0}optgroup{font-weight:700}button,input{overflow:visible}button,select{text-transform:none}[type=reset],[type=submit],button,html [type=button]{-webkit-appearance:button}[type=button]::-moz-focus-inner,[type=reset]::-moz-focus-inner,[type=submit]::-moz-focus-inner,button::-moz-focus-inner{border-style:none;padding:0}[type=button]:-moz-focusring,[type=reset]:-moz-focusring,[type=submit]:-moz-focusring,button:-moz-focusring{outline:1px dotted ButtonText}fieldset{border:1px solid silver;margin:0 2px;padding:.35em .625em .75em}legend{box-sizing:border-box;color:inherit;display:table;max-width:100%;padding:0;white-space:normal}textarea{overflow:auto}[type=checkbox],[type=radio]{box-sizing:border-box;padding:0}[type=number]::-webkit-inner-spin-button,[type=number]::-webkit-outer-spin-button{height:auto}[type=search]{-webkit-appearance:textfield;outline-offset:-2px}[type=search]::-webkit-search-cancel-button,[type=search]::-webkit-search-decoration{-webkit-appearance:none}::-webkit-input-placeholder{color:inherit;opacity:.54}::-webkit-file-upload-button{-webkit-appearance:button;font:inherit}html{font:100%/1.625 -apple-system,'BlinkMacSystemFont','Segoe UI','Roboto','Helvetica','Arial',sans-serif,'Apple Color Emoji','Segoe UI Emoji','Segoe UI Symbol';box-sizing:border-box;overflow-y:scroll;}*{box-sizing:inherit;}*:before{box-sizing:inherit;}*:after{box-sizing:inherit;}body{color:hsla(0,0%,0%,0.8);font-family:-apple-system,'BlinkMacSystemFont','Segoe UI','Roboto','Helvetica','Arial',sans-serif,'Apple Color Emoji','Segoe UI Emoji','Segoe UI Symbol';font-weight:normal;word-wrap:break-word;font-kerning:normal;-moz-font-feature-settings:"kern", "liga", "clig", "calt";-ms-font-feature-settings:"kern", "liga", "clig", "calt";-webkit-font-feature-settings:"kern", "liga", "clig", "calt";font-feature-settings:"kern", "liga", "clig", "calt";}img{max-width:100%;margin-left:0;margin-right:0;margin-top:0;padding-bottom:0;padding-left:0;padding-right:0;padding-top:0;margin-bottom:0.8125rem;}h1{margin-left:0;margin-right:0;margin-top:2.4375rem;padding-bottom:calc(0.40625rem - 1px);padding-left:0;padding-right:0;padding-top:0;margin-bottom:1.21875rem;color:inherit;font-family:-apple-system,'BlinkMacSystemFont','Segoe UI','Roboto','Helvetica','Arial',sans-serif,'Apple Color Emoji','Segoe UI Emoji','Segoe UI Symbol';font-weight:600;text-rendering:optimizeLegibility;font-size:2rem;line-height:1.1;border-bottom:1px solid hsla(0,0%,0%,0.07);}h2{margin-left:0;margin-right:0;margin-top:1.625rem;padding-bottom:calc(0.40625rem - 1px);padding-left:0;padding-right:0;padding-top:0;margin-bottom:0.40625rem;color:inherit;font-family:-apple-system,'BlinkMacSystemFont','Segoe UI','Roboto','Helvetica','Arial',sans-serif,'Apple Color Emoji','Segoe UI Emoji','Segoe UI Symbol';font-weight:600;text-rendering:optimizeLegibility;font-size:1.51572rem;line-height:1.1;border-bottom:1px solid hsla(0,0%,0%,0.07);}h3{margin-left:0;margin-right:0;margin-top:0;padding-bottom:0;padding-left:0;padding-right:0;padding-top:0;margin-bottom:0.8125rem;color:inherit;font-family:-apple-system,'BlinkMacSystemFont','Segoe UI','Roboto','Helvetica','Arial',sans-serif,'Apple Color Emoji','Segoe UI Emoji','Segoe UI Symbol';font-weight:600;text-rendering:optimizeLegibility;font-size:1.31951rem;line-height:1.1;}h4{margin-left:0;margin-right:0;margin-top:0;padding-bottom:0;padding-left:0;padding-right:0;padding-top:0;margin-bottom:0.8125rem;color:inherit;font-family:-apple-system,'BlinkMacSystemFont','Segoe UI','Roboto','Helvetica','Arial',sans-serif,'Apple Color Emoji','Segoe UI Emoji','Segoe UI Symbol';font-weight:600;text-rendering:optimizeLegibility;font-size:1rem;line-height:1.1;}h5{margin-left:0;margin-right:0;margin-top:0;padding-bottom:0;padding-left:0;padding-right:0;padding-top:0;margin-bottom:0.8125rem;color:inherit;font-family:-apple-system,'BlinkMacSystemFont','Segoe UI','Roboto','Helvetica','Arial',sans-serif,'Apple Color Emoji','Segoe UI Emoji','Segoe UI Symbol';font-weight:600;text-rendering:optimizeLegibility;font-size:0.87055rem;line-height:1.1;}h6{margin-left:0;margin-right:0;margin-top:0;padding-bottom:0;padding-left:0;padding-right:0;padding-top:0;margin-bottom:0.8125rem;color:hsla(0,0%,0%,0.53);font-family:-apple-system,'BlinkMacSystemFont','Segoe UI','Roboto','Helvetica','Arial',sans-serif,'Apple Color Emoji','Segoe UI Emoji','Segoe UI Symbol';font-weight:600;text-rendering:optimizeLegibility;font-size:0.81225rem;line-height:1.1;}hgroup{margin-left:0;margin-right:0;margin-top:0;padding-bottom:0;padding-left:0;padding-right:0;padding-top:0;margin-bottom:0.8125rem;}ul{margin-left:1.625rem;margin-right:0;margin-top:0;padding-bottom:0;padding-left:0;padding-right:0;padding-top:0;margin-bottom:0.8125rem;list-style-position:outside;list-style-image:none;}ol{margin-left:1.625rem;margin-right:0;margin-top:0;padding-bottom:0;padding-left:0;padding-right:0;padding-top:0;margin-bottom:0.8125rem;list-style-position:outside;list-style-image:none;}dl{margin-left:0;margin-right:0;margin-top:0;padding-bottom:0;padding-left:0;padding-right:0;padding-top:0;margin-bottom:0.8125rem;}dd{margin-left:0;margin-right:0;margin-top:0;padding-bottom:0;padding-left:0;padding-right:0;padding-top:0;margin-bottom:0.8125rem;}p{margin-left:0;margin-right:0;margin-top:0;padding-bottom:0;padding-left:0;padding-right:0;padding-top:0;margin-bottom:0.8125rem;}figure{margin-left:0;margin-right:0;margin-top:0;padding-bottom:0;padding-left:0;padding-right:0;padding-top:0;margin-bottom:0.8125rem;}pre{margin-left:0;margin-right:0;margin-top:0;padding-bottom:0;padding-left:0;padding-right:0;padding-top:0;margin-bottom:0.8125rem;font-size:0.85rem;line-height:1.625rem;}table{margin-left:0;margin-right:0;margin-top:0;padding-bottom:0;padding-left:0;padding-right:0;padding-top:0;margin-bottom:0.8125rem;font-size:1rem;line-height:1.625rem;border-collapse:collapse;width:100%;}fieldset{margin-left:0;margin-right:0;margin-top:0;padding-bottom:0;padding-left:0;padding-right:0;padding-top:0;margin-bottom:0.8125rem;}blockquote{margin-left:0;margin-right:0;margin-top:0;padding-bottom:0;padding-left:calc(0.8125rem - 1px);padding-right:0;padding-top:0;margin-bottom:0.8125rem;border-left:4px solid hsla(0,0%,0%,0.13);color:hsla(0,0%,0%,0.53);}form{margin-left:0;margin-right:0;margin-top:0;padding-bottom:0;padding-left:0;padding-right:0;padding-top:0;margin-bottom:0.8125rem;}noscript{margin-left:0;margin-right:0;margin-top:0;padding-bottom:0;padding-left:0;padding-right:0;padding-top:0;margin-bottom:0.8125rem;}iframe{margin-left:0;margin-right:0;margin-top:0;padding-bottom:0;padding-left:0;padding-right:0;padding-top:0;margin-bottom:0.8125rem;}hr{margin-left:0;margin-right:0;margin-top:0;padding-bottom:0;padding-left:0;padding-right:0;padding-top:0;margin-bottom:calc(0.8125rem - 1px);background:hsla(0,0%,0%,0.2);border:none;height:1px;}address{margin-left:0;margin-right:0;margin-top:0;padding-bottom:0;padding-left:0;padding-right:0;padding-top:0;margin-bottom:0.8125rem;}b{font-weight:600;}strong{font-weight:600;}dt{font-weight:600;}th{font-weight:600;}li{margin-bottom:calc(0.8125rem / 2);}ol li{padding-left:0;}ul li{padding-left:0;}li > ol{margin-left:1.625rem;margin-bottom:calc(0.8125rem / 2);margin-top:calc(0.8125rem / 2);}li > ul{margin-left:1.625rem;margin-bottom:calc(0.8125rem / 2);margin-top:calc(0.8125rem / 2);}blockquote *:last-child{margin-bottom:0;}li *:last-child{margin-bottom:0;}p *:last-child{margin-bottom:0;}li > p{margin-bottom:calc(0.8125rem / 2);}code{font-size:0.85rem;line-height:1.625rem;}kbd{font-size:0.85rem;line-height:1.625rem;}samp{font-size:0.85rem;line-height:1.625rem;}abbr{border-bottom:1px dotted hsla(0,0%,0%,0.5);cursor:help;}acronym{border-bottom:1px dotted hsla(0,0%,0%,0.5);cursor:help;}abbr[title]{border-bottom:1px dotted hsla(0,0%,0%,0.5);cursor:help;text-decoration:none;}thead{text-align:left;}td,th{text-align:left;border-bottom:1px solid hsla(0,0%,0%,0.12);font-feature-settings:"tnum";-moz-font-feature-settings:"tnum";-ms-font-feature-settings:"tnum";-webkit-font-feature-settings:"tnum";padding-left:1.08333rem;padding-right:1.08333rem;padding-top:0.8125rem;padding-bottom:calc(0.8125rem - 1px);}th:first-child,td:first-child{padding-left:0;}th:last-child,td:last-child{padding-right:0;}h3,h4,h5,h6{margin-bottom:0.8125rem;margin-top:1.625rem;}ol,ul{margin-left:2.03125rem;}li>ol,li>ul{margin-left:2.03125rem;}a{color:#4078c0;text-decoration:none;}a:hover,a:active{text-decoration:underline;}h1,h2,h3{border:0;margin:0;}</style><title data-react-helmet="true">Build Your Front-End Environment - Part 1</title><link rel="alternate" type="application/rss+xml" href="/blog/rss.xml"/><link rel="shortcut icon" href="/blog/icons/icon-48x48.png"/><link rel="manifest" href="/blog/manifest.webmanifest"/><meta name="theme-color" content="#663399"/><link rel="apple-touch-icon" sizes="48x48" href="/blog/icons/icon-48x48.png"/><link rel="apple-touch-icon" sizes="72x72" href="/blog/icons/icon-72x72.png"/><link rel="apple-touch-icon" sizes="96x96" href="/blog/icons/icon-96x96.png"/><link rel="apple-touch-icon" sizes="144x144" href="/blog/icons/icon-144x144.png"/><link rel="apple-touch-icon" sizes="192x192" href="/blog/icons/icon-192x192.png"/><link rel="apple-touch-icon" sizes="256x256" href="/blog/icons/icon-256x256.png"/><link rel="apple-touch-icon" sizes="384x384" href="/blog/icons/icon-384x384.png"/><link rel="apple-touch-icon" sizes="512x512" href="/blog/icons/icon-512x512.png"/><style data-styled="cIXuLy bzxUCJ doHrl jUMLzI kScnZU cgaURf iiXTIY kEVUGs klgmrd bYxgOW bXoMrC ksMHCz hhOsxd fwNQox jlOoGv kMtpRa inWEyQ eukqOq FmFZX pbozq" data-styled-version="4.1.3">
+/* sc-component-id: ui__Biography-yn6g6c-0 */
+.pbozq{display:block;text-align:center;margin:1.625rem 0;padding:0.8125rem;background-color:#ffffff;color:#000;box-shadow:0px 1px 5px #cccccc;border-radius:3px;} .pbozq img{border:1px solid #ccc;padding:0.1625rem;border-left:none;border-right:none;margin-right:0.8125rem;margin-bottom:0;border-radius:50%;width:4.0625rem;height:4.0625rem;} @media (min-width:576px){.pbozq{display:-webkit-box;display:-webkit-flex;display:-ms-flexbox;display:flex;text-align:left;}}
+/* sc-component-id: ui__Header-l3gitt-0 */
+.cIXuLy{box-shadow:0px 1px 5px #cccccc;background-color:#ffffff;} @media (min-width:576px){.cIXuLy{margin-bottom:1.625rem;}}
+/* sc-component-id: ui__InnerHeader-l3gitt-1 */
+.bzxUCJ{display:-webkit-box;display:-webkit-flex;display:-ms-flexbox;display:-webkit-box;display:-webkit-flex;display:-ms-flexbox;display:flex;max-width:56.875rem;margin-left:auto;margin-right:auto;padding:1.3rem 0.8125rem;}
+/* sc-component-id: ui__Title-l3gitt-2 */
+.doHrl{display:-webkit-box;display:-webkit-flex;display:-ms-flexbox;display:-webkit-box;display:-webkit-flex;display:-ms-flexbox;display:flex;-webkit-box-flex:1;-webkit-flex:1 1 auto;-ms-flex:1 1 auto;-webkit-flex:1 1 auto;-ms-flex:1 1 auto;flex:1 1 auto;} .doHrl h2{margin:0;padding:0;} .doHrl h2 a{box-shadow:none;-webkit-text-decoration:none;text-decoration:none;color:inherit;}
+/* sc-component-id: ui__Control-l3gitt-3 */
+.kScnZU{display:-webkit-box;display:-webkit-flex;display:-ms-flexbox;display:-webkit-box;display:-webkit-flex;display:-ms-flexbox;display:flex;-webkit-box-flex:0;-webkit-flex:0 0 auto;-ms-flex:0 0 auto;-webkit-flex:0 0 auto;-ms-flex:0 0 auto;flex:0 0 auto;} .kScnZU a{margin:0;cursor:pointer;} .kScnZU a img{width:1.7875rem;margin:0;}
+/* sc-component-id: ui__Container-l3gitt-4 */
+.cgaURf{margin-left:auto;margin-right:auto;max-width:65rem;}
+/* sc-component-id: ui__Body-l3gitt-5 */
+.iiXTIY{margin-left:auto;margin-right:auto;max-width:48.75rem;}
+/* sc-component-id: ui__Beta-l3gitt-6 */
+.jUMLzI{background-color:red;color:#fff;font-size:12px;font-weight:bold;line-height:1.1;height:22px;padding:5px;border-radius:3px;margin-left:5px;margin-top:-5px;}
+/* sc-component-id: sc-global-2953056686 */
+body{color:#000;background-color:#F0F0F0;} pre{background-color:#F8F8F8;padding:10px;border:1px solid #E7EAED;border-radius:3px;overflow:auto;} blockquote{color:rgba(0,0,0,0.5);border-left:4px solid rgba(0,0,0,0.3);} p code{background-color:#F8F8F8;padding:1px;border:1px solid #E7EAED;border-radius:3x;}
+/* sc-component-id: ui__Head-sc-15n9t1r-0 */
+.bYxgOW{text-align:center;} .bYxgOW h3{margin-top:0.8125rem;}
+/* sc-component-id: ui__Metadata-sc-15n9t1r-1 */
+.bXoMrC{margin-top:0.8125rem;font-size:0.975rem;} .bXoMrC a{-webkit-text-decoration:none;text-decoration:none;color:#000;}
+/* sc-component-id: ui__Post-sc-94ucj3-1 */
+.klgmrd{background-color:#ffffff;box-shadow:0px 0px 10px #cccccc;padding:0.8125rem;border-radius:3px;border-top:5px solid #8d8d8d;}
+/* sc-component-id: ui__Body-sc-94ucj3-2 */
+.ksMHCz{margin:1.3rem 0;padding:1.625rem 0.8125rem;border-top:1px solid #ccc;border-bottom:1px solid #ccc;}
+/* sc-component-id: ui__Discussion-sc-94ucj3-3 */
+.FmFZX{background-color:#ffffff;box-shadow:0px 0px 10px #cccccc;padding:0.8125rem 0.8125rem 0px 0.8125rem;border-radius:3px;}
+/* sc-component-id: ui__Foot-sc-94ucj3-4 */
+.hhOsxd{display:-webkit-box;display:-webkit-flex;display:-ms-flexbox;display:-webkit-box;display:-webkit-flex;display:-ms-flexbox;display:flex;-webkit-box-align:center;-webkit-align-items:center;-ms-flex-align:center;-webkit-align-items:center;-webkit-box-align:center;-ms-flex-align:center;align-items:center;-webkit-box-pack:justify;-webkit-justify-content:space-between;-ms-flex-pack:justify;-webkit-box-pack:justify;-webkit-justify-content:space-between;-ms-flex-pack:justify;justify-content:space-between;}
+/* sc-component-id: ui__Share-sc-94ucj3-5 */
+.kMtpRa{margin-bottom:calc(0.8125rem / 2);display:-webkit-box;display:-webkit-flex;display:-ms-flexbox;display:-webkit-box;display:-webkit-flex;display:-ms-flexbox;display:flex;-webkit-box-align:center;-webkit-align-items:center;-ms-flex-align:center;-webkit-align-items:center;-webkit-box-align:center;-ms-flex-align:center;align-items:center;-webkit-box-flex:0;-webkit-flex:0 0 auto;-ms-flex:0 0 auto;-webkit-flex:0 0 auto;-ms-flex:0 0 auto;flex:0 0 auto;} .kMtpRa span{font-size:0.975rem;margin-right:5px;} .kMtpRa div{cursor:pointer;outline:none;}
+/* sc-component-id: ui__Tags-sc-94ucj3-6 */
+.fwNQox{overflow:hidden;-webkit-box-flex:1;-webkit-flex:1 1 auto;-ms-flex:1 1 auto;-webkit-flex:1 1 auto;-ms-flex:1 1 auto;flex:1 1 auto;list-style:none;margin:0;padding:0;}
+/* sc-component-id: ui__Tag-sc-94ucj3-7 */
+.jlOoGv{display:inline-block;border-radius:3px;font-weight:600;padding:3px 10px;margin:0 5px 10px;font-size:0.8125rem;} .jlOoGv span{border-radius:3px;color:#000;display:inline-block;height:26px;line-height:26px;-webkit-text-decoration:none;text-decoration:none;}
+/* sc-component-id: ui__NavContainer-p40sjr-0 */
+.inWEyQ{margin:20px 0;}
+/* sc-component-id: ui__NavigationPrev-p40sjr-1 */
+.eukqOq{float:left;text-align:left;} .eukqOq b{display:block;}</style><style data-styled="kTudxj" data-styled-version="4.1.3">
+/* sc-component-id: PoweredBy-lgcmhb-0 */
+.kTudxj{text-align:center;border-top:1px solid #ccc;margin-top:1.625rem;padding:1.625rem 0;max-width:56.875rem;margin-left:auto;margin-right:auto;} .kTudxj a{-webkit-text-decoration:none;text-decoration:none;color:#000;}</style><meta data-react-helmet="true" name="description" content="The modern setup nowadays!"/><meta data-react-helmet="true" name="keywords" content="front-end, modern, setup, nodejs, python, chrome, devtools, typora, filezilla, cmdr, terminalizer, mocking, json-server, mocky, postman"/><meta data-react-helmet="true" name="twitter:card" content="summary_large_image"/><meta data-react-helmet="true" name="twitter:creator" content="@hamed_farag"/><meta data-react-helmet="true" name="twitter:title" content="Build Your Front-End Environment - Part 1"/><meta data-react-helmet="true" name="twitter:description" content="The modern setup nowadays!"/><meta name="generator" content="Gatsby 2.1.27"/><link as="script" rel="preload" href="/blog/component---src-templates-blog-template-index-js-65984ec889f52e41f183.js"/><link as="script" rel="preload" href="/blog/app-c96a02f61ed0f57c039b.js"/><link as="script" rel="preload" href="/blog/9-0a83d5e1c34a1b816747.js"/><link as="script" rel="preload" href="/blog/1-fa8b5ee810b880b2d9cb.js"/><link as="script" rel="preload" href="/blog/0-8f94de978e24fa0a3ab4.js"/><link as="script" rel="preload" href="/blog/webpack-runtime-aab03f1c6e82d2550bcb.js"/><link as="fetch" rel="preload" href="/blog/static/d/116/path---front-end-env-p-1-3-f-3-649-mtyadke75NLLO60XHC5fp4C5pHY.json" crossorigin="use-credentials"/></head><body><noscript id="gatsby-noscript">This app works best with JavaScript enabled.</noscript><div id="___gatsby"><div style="outline:none" tabindex="-1" role="group"><div class="ui__Header-l3gitt-0 cIXuLy"><div class="ui__InnerHeader-l3gitt-1 bzxUCJ"><div class="ui__Title-l3gitt-2 doHrl"><h2><a href="/blog/">Hamed&#x27;s Blog</a></h2><span class="ui__Beta-l3gitt-6 jUMLzI">BETA</span></div><div class="ui__Control-l3gitt-3 kScnZU"><a><img src="data:image/png;base64,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"/></a></div></div></div><div class="ui__Container-l3gitt-4 cgaURf"><div class="ui__Body-l3gitt-5 iiXTIY"><div class="ui__Blog-sc-94ucj3-0 kEVUGs"><div class="ui__Post-sc-94ucj3-1 klgmrd"><div class="ui__Head-sc-15n9t1r-0 bYxgOW"><h1>Build Your Front-End Environment - Part 1</h1><h3>The modern setup nowadays!</h3><div class="ui__Metadata-sc-15n9t1r-1 bXoMrC">02 Mar, 2019<!-- --> |<!-- --> <a href="https://blog.medium.com/read-time-and-you-bc2048ab620c" target="_blank">12 min read</a></div></div><div class="ui__Body-sc-94ucj3-2 ksMHCz"><p><strong>In the dark age</strong>, the front-end was limited - comparing with nowadays - with some libraries, plugins and simple prerequisites you need it to start the development process.
+All you need is a PC or Mac machine, notepad++ and a browser. Then you can rock the world without any fears.</p>
+<p>A library like JQuery and its plugins for DOM manipulation, underscore for ready-made utility functions, knockout and AngularJS for binding data into DOM to create single page applications and so on, You just need a simple editor and write your code in ES5, no compiling, no parsing, no transpiling, just your skills at writing ES5, CSS and HTML.</p>
+<p><strong>Today</strong>, front-end is evolving and the JavaScript became bloated. Everything goes crazy since Ryan Dahl wrote Node.js in 2009, you can run JavaScript in server side, and I think this is a very important milestone in front-end history. Thousands of apps now built with <a href="https://electronjs.org/">Electron</a>, a framework helps you to Build cross-platform desktop apps with JavaScript, HTML, and CSS. So, you can now create a desktop application like <a href="https://github.com/Microsoft/vscode">Visual studio Code</a>, <a href="https://www.gitkraken.com/">GitKraken</a> using electron, Woow !!</p>
+<p>Typescript, ES6, SCSS and LESS they need a transpiler or compiler like babelJS, babelJS converts them into a backward compatible version of JavaScript in current and older browsers or environments. Babel needs Webpack for example, to help it transpiling and bundling these languages. And all of these technologies need a Node.js environment.</p>
+<div style="text-align:center;background-color: white;">
+    
+  <a class="gatsby-resp-image-link" href="/blog/static/cc03b7e0ac1d158070b15d02c4693ea6/6c057/front-end-roadmap.png" style="display: block" target="_blank" rel="noopener">
+  
+  <span class="gatsby-resp-image-wrapper" style="position: relative; display: block;  max-width: 590px; margin-left: auto; margin-right: auto;">
+    <span class="gatsby-resp-image-background-image" style="padding-bottom: 123.4%; position: relative; bottom: 0; left: 0; background-image: url(&apos;data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABQAAAAZCAIAAAC+dZmEAAAACXBIWXMAAAsSAAALEgHS3X78AAADvklEQVQ4y5VUy27bRhTlL7SLfku3XfcDggIFsugmTRcB2kW6bREENdCgARIUyCJdBAXShR/Iw7bsmI4rOZbFREpkPSnrZYnvx4gzJIfD10xJyY5btDHcwWw4F+feew7PvRz78ElSltAL4oz79xOlOQJCOD45GY1HQRD8D/DipGkyc0MShotclwXHsRfHbgZ3kGuYAGN8SXBeRJZ/GwxvAdcLI2pBkqbpJcFp1uN08lNH/FoBqNRLDvrh/DXPSmk6v/Siyoq6PB7fhz6RrcCwURxH8/f/YM4t8i1icYzD0GQ0OiVPfNMChORqAygPR7+ORr+Y1s77MtyZSFESM8cpDoY3HdhYhJtSVB7ElMUGGOtg4MCm674LQ+kcTIihgaENDMdxXBzpiA2U4Wy2bTljGUSWS5HniIOfDXMdYmYCP/vt72lzb6pfbWx+rOsvSMKASzTIjqVmo/tAtUZZGOEIQkczXN8n2ac1o673N86yXGu3nk7UCYkYxKmHQwcRkrL+pDSZPrIR9HHSn1ium5CgP5zcN6zlzLjnaps2M8zEhiSMqQ2ArKlBGL15+3xv744x84+PV9bXv6hWl2T5aKuwVKn8niQLRWnGedofL6naPeB52Ef1P+8KhVvHjU0/YjRN3JD1m8v88tX6/m1pKhUKB4LQSdMzzp7XEruf9cTPNSAjN3i5s7b57HGr3QziPDcMKPaQrcvQNjKXAPuk090bj6uEeKdtZ/5DkBm2r+m6JCu9nigeD1Rdd12EMD03H2OSsr3LXymXryE0PAVn3iCBqthGPB/fIGQuZmGY3Xjm58aOolBSNNlEHVFeWdnd2DgAAJ2CNfOpUPmo0fzUgmGaEEW60+ncNNTbUQRwbm3mBTFAfhiFCLVGQ348LmHcyyaIwzEbDOuF1e8PX96Ffow8LL59WNz6sSnckw2Tb+fCZsyDhKm2U6t9Jwjf8Pz1Uum6IFzjUMBk1dnd3a/Vmn5AEY7L5Vphq1QqvbZm3n4vNGAqGW3NbpDA395+tbb64vEfz5484dfWdrhafbXZWoNIybozHDlOvGwBSZIEHeCT2MHp0GRl4YdK5dv+VHktHHY6TWl6oqqSYajc0eHVo8qXENR74o1i8RNFeThfY7mHfEJxlOKIVd89qtYf9AajwmahVCzqur5YdVzgU+zTJGGe1wdACAJtHsiHFAVp5rlc7YTqLmsPFJ7fWX++zvN8tVoVRZG7YLN6JD2dPUrDhEnarN1utTudxtFRvV7vdrvcP3dQerZ52cxPhAGZAz+Y/S+TFmRAgQjFNAAAAABJRU5ErkJggg==&apos;); background-size: cover; display: block;">
+      <img class="gatsby-resp-image-image" style="width: 100%; height: 100%; margin: 0; vertical-align: middle; position: absolute; top: 0; left: 0; box-shadow: inset 0px 0px 0px 400px white;" alt="Front-End Roadmap" title="Front-End Roadmap" src="/blog/static/cc03b7e0ac1d158070b15d02c4693ea6/623ee/front-end-roadmap.png" srcset="/blog/static/cc03b7e0ac1d158070b15d02c4693ea6/816c5/front-end-roadmap.png 148w,
+/blog/static/cc03b7e0ac1d158070b15d02c4693ea6/c766b/front-end-roadmap.png 295w,
+/blog/static/cc03b7e0ac1d158070b15d02c4693ea6/623ee/front-end-roadmap.png 590w,
+/blog/static/cc03b7e0ac1d158070b15d02c4693ea6/e5345/front-end-roadmap.png 885w,
+/blog/static/cc03b7e0ac1d158070b15d02c4693ea6/6c057/front-end-roadmap.png 1000w" sizes="(max-width: 590px) 100vw, 590px">
+    </span>
+  </span>
+  
+  </a>
+    
+</div>
+<p style="text-align:center;">
+    The roadmap you should follow to be a front-end developer nowadays!
+</p><p></p>
+<p>So, you can imagine now what is the prerequisites for your PC to build your first modern website.</p>
+<br/>
+<h2>Let’s Start</h2>
+<p>I am a Windows user since 2001 and started with Windows 98, so don’t be surprised, all apps listed below related to this OS and trying to make windows more powerful.</p>
+<p>We will start with applications that we can consider it as infrastructure apps to convert your machine from normal one to a front-end powerful machine.</p>
+<br/>
+<h3>Infrastructure</h3>
+<h4><a href="https://nodejs.org/en/">Node.JS</a></h4>
+<p>Node.js is an open-source, cross-platform JavaScript run-time environment that executes JavaScript code outside of a browser. Node.js lets developers use JavaScript to write command line tools and for server-side scripting—running scripts server-side to produce dynamic web page content before the page is sent to the user’s web browser. Node.js was originally written by Ryan Dahl in 2009.</p>
+<p>In January 2010, a package manager was introduced for the Node.js environment called npm.</p>
+<p>Built on <a href="https://developers.google.com/v8/">Chrome’s V8 JavaScript engine</a>.</p>
+<p>Node.js is the first thing you need to setup, so you can run any tool you need in the development process. Gulp, Grunt, Webpack, Parcel, Rollup almost every tool based on JS that run on server side need Node.js.</p>
+<p>The default package manager of Node.js called <strong>npm</strong>, believe it or not, <strong>npm</strong> not means <strong>node package manager</strong>, this name called by the community and the creator of <strong>npm</strong> not announced the mean of it, there is a funny <a href="https://github.com/npm/npm-expansions">repo on github</a>, the community submit the meaning of <strong>npm</strong> and appear in the header of the <a href="https://npmjs.com/">npmjs.com</a> website.</p>
+<div style="text-align:center;">
+    <img src="/blog/npm-81372321f50f89c562474048e69dcf23.gif" alt="Meaning of npm" title="Meaning of npm">
+</div>
+<h5>What is NPM?</h5>
+<p>In the days before package managers, it was commonplace for JavaScript engineers to rely on a small number of dependencies stored directly in their projects or served by a CDN. The first major JavaScript package manager, npm, was built shortly after Node.js was introduced, and it quickly became one of the most popular package managers in the world. Thousands of new open source projects were created and engineers shared more code than ever before.</p>
+<p>The primary function of any package manager is to install some package — a piece of code that serves a particular purpose — from a global registry into an engineer’s local environment. Each package may or may not depend on other packages. A typical project could have tens, hundreds, or even thousands of packages within its tree of dependencies.</p>
+<p>You can <a href="https://nodejs.org/en/download/">download</a> Node.js and start testing your JavaScript skills directly in the console.</p>
+<div style="text-align:center;">
+    <img src="/blog/node-758470058ab8f290bc992aaeda63d3ff.gif" alt="Node in console" title="Node in console">
+</div>
+<h4><a href="https://yarnpkg.com/lang/en/">Yarn</a></h4>
+<p><strong>Yarn</strong> is a new package manager that replaces the existing workflow for the npm client or other package managers while remaining compatible with the npm registry. It has the same feature set as existing workflows while operating faster, more securely, and more reliably.</p>
+<p><strong>Yarn</strong> is optional for me and I am very satisfied with <strong>npm</strong> at least for now.</p>
+<h4><a href="https://github.com/felixrieseberg/windows-build-tools">windows-build-tools</a></h4>
+<p>My first time to deal with sass, I wasn’t able to compile sass or scss files using task runner called <strong>gulp</strong>, after reading the error in the console carefully and a lot of searching, the node-sass package wasn’t compiled successfully on my machine. Why? node-sass depends on package called <strong>node-gyp</strong> and this package has a prerequisite.</p>
+<p>The prerequisite is a build tool for windows to compile native Node modules, called <strong>windows-build-tools</strong> and this tool install and configure the following</p>
+<ul>
+<li>Visual C++ Build Environment</li>
+<li>Python  2.7</li>
+<li>Launch cmd, <code class="language-text">npm config set msvs_version 2017</code></li>
+</ul>
+<p>Note: You can install the above points manually and it will do the same job to compile node-gyp package.</p>
+<br/>
+<h3>Utilities</h3>
+<h4><a href="https://cmder.net/">Cmder</a></h4>
+<p>I don’t like the default terminal that developed by Microsoft, the CMD. It is limited and you cannot customize it easily. I searched for a replacement and I found a terminal called <strong>Cmdr</strong>.</p>
+<p><strong>Cmdr</strong> is a portable console emulator for Windows.</p>
+<p><strong>Cmder</strong> is a software package created out of pure frustration over absence of usable console emulator on Windows. It is based on <strong>ConEmu</strong> with major config overhaul, comes with a Monokai color scheme, amazing clink (further enhanced by clink-completions) and a custom prompt layout.</p>
+<h5>Why use Cmdr?</h5>
+<p>The main advantage of Cmder is portability. It is designed to be totally self-contained with no external dependencies, which makes it great for USB Sticks or cloud storage. So you can carry your console, aliases and binaries (like wget, curl and git) with you anywhere.</p>
+<p>The Cmder’s user interface is also designed to be more eye pleasing.</p>
+<ul>
+<li>You can change the default colors, fonts.</li>
+<li>Shortcuts out of the box.</li>
+<li>Open more than one terminal with different types (CMD, PowerShell and Bash) per window (Tabs).</li>
+<li>You can rename the tabs.</li>
+</ul>
+<h4><a href="https://terminalizer.com/">Terminalizer</a></h4>
+<p>A helpful utility that record your terminal and generate animated gif images or share a web player. Why we can use something like that? You may want to share steps to configure something with your workmate, You can also record your routine commands to share with a newcomer in your team or you want to share something for fun.</p>
+<div style="text-align:center;">
+    <img src="/blog/terminalizer-bc031412e214fdc1170bf732c7bc1ce3.gif" alt="terminalizer" title="terminalizer">
+</div>
+<p>Steps are very simple</p>
+<ol>
+<li>
+<p><code class="language-text">npm install -g terminalizer</code></p>
+</li>
+<li>
+<p>Then write <code class="language-text">terminalizer record demo</code> demo is the name of this record</p>
+</li>
+<li>
+<p>if you want to edit the record, all record configuration saved into file called <code class="language-text">demo.yml</code>, you can open it and edit frames, adjust delays, customize the colors, font, window frame, apply custom styles using CSS, etc. You can open it into the terminal by typing <code class="language-text">vim demo.yml</code> </p>
+</li>
+<li>
+<p><code class="language-text">terminalizer play demo</code> if you want to play it in the terminal.</p>
+</li>
+<li>
+<p><code class="language-text">terminalizer render demo</code> to generate gif image.</p>
+</li>
+<li>
+<p>Terminal will print the path of the output gif.</p>
+</li>
+</ol>
+<br/>
+<h3>Mocking</h3>
+<p>Mocking is primarily used in unit testing. An object under test may have dependencies on other (complex) objects. To isolate the behavior of the object you want to replace the other objects by mocks that simulate the behavior of the real objects. This is useful if the real objects are impractical to incorporate into the unit test.</p>
+<p>But in this section, we will talk about API Mocking.</p>
+<h5>What is API Mocking?</h5>
+<p>The most common term for creating simulated APIs is mocking. The basic concept is  - instead of using an actual API –  a “replacement” version of that API is created and used instead. It behaves as the original API but lacks many of the functional and non-functional characteristics of the original component. </p>
+<p>How can we mock the APIs for development purpose? We can mock it in your machine or use an online tool.</p>
+<h4><a href="https://www.mocky.io/">Mocky</a></h4>
+<p>Mock your HTTP responses to test your REST API</p>
+<p>Write your custom response and <strong>mocky</strong> will generate for you an URL you can use it normally as the real API.</p>
+<div style="text-align:center;">
+    
+  <a class="gatsby-resp-image-link" href="/blog/static/4eb5f383e453b02778b91bad5c14c9a8/b0190/mocky.png" style="display: block" target="_blank" rel="noopener">
+  
+  <span class="gatsby-resp-image-wrapper" style="position: relative; display: block;  max-width: 590px; margin-left: auto; margin-right: auto;">
+    <span class="gatsby-resp-image-background-image" style="padding-bottom: 51.78571428571428%; position: relative; bottom: 0; left: 0; background-image: url(&apos;data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABQAAAAKCAYAAAC0VX7mAAAACXBIWXMAAA7DAAAOwwHHb6hkAAABJElEQVQoz41T207EIBTs15rsqy9+kPpi4idp9GXbxl1ZoEC5dTyHpqTb3aSSTLgNwzBAY62FlBLjOEIphWEYkFJCCOEGMUZorWk+4l6ZpgkNCxljygIWFEKURc65sskWSkmowUIbD+cTIVN7RM5TEW0siUmpCpmd/pxO+CXRxZX3voL7hk4gLhpnoWFcKDgLhZjy7JBVmWzJEY0gUx1HT4RAu6ZCWmN1QOrnAi455xJXwyTuMBIh8HHJpbOXIrpks85pLT6VsXmco2vqBNV8GfeC3sPCuxFklwsp/0NoVxBXGe2XrXDNsO4Q6J35iCHM4LYJqWa8xVacn1oVtCHj6f0bh9dPPDzPOLx84PHtC9anK0eFTx/ieGzR9z26rkPbtlB0oX+Bzw0Ey2bo7wAAAABJRU5ErkJggg==&apos;); background-size: cover; display: block;">
+      <img class="gatsby-resp-image-image" style="width: 100%; height: 100%; margin: 0; vertical-align: middle; position: absolute; top: 0; left: 0; box-shadow: inset 0px 0px 0px 400px white;" alt="mocky" title="mocky" src="/blog/static/4eb5f383e453b02778b91bad5c14c9a8/623ee/mocky.png" srcset="/blog/static/4eb5f383e453b02778b91bad5c14c9a8/816c5/mocky.png 148w,
+/blog/static/4eb5f383e453b02778b91bad5c14c9a8/c766b/mocky.png 295w,
+/blog/static/4eb5f383e453b02778b91bad5c14c9a8/623ee/mocky.png 590w,
+/blog/static/4eb5f383e453b02778b91bad5c14c9a8/b0190/mocky.png 728w" sizes="(max-width: 590px) 100vw, 590px">
+    </span>
+  </span>
+  
+  </a>
+    
+</div>
+<h4><a href="https://jsonplaceholder.typicode.com/">JsonPlaceholder</a></h4>
+<p>Fake Online REST API for Testing and Prototyping.</p>
+<p>JSONPlaceholder is a free online REST API that you can use whenever you need some fake data.
+It’s great for tutorials, testing new libraries, sharing code examples, …</p>
+<div style="text-align:center;">
+    
+  <a class="gatsby-resp-image-link" href="/blog/static/d637b7af38e98bf7d6f650476ead6aeb/03cf8/jsonplaceholder.png" style="display: block" target="_blank" rel="noopener">
+  
+  <span class="gatsby-resp-image-wrapper" style="position: relative; display: block;  max-width: 590px; margin-left: auto; margin-right: auto;">
+    <span class="gatsby-resp-image-background-image" style="padding-bottom: 49.30291508238277%; position: relative; bottom: 0; left: 0; background-image: url(&apos;data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABQAAAAKCAIAAAA7N+mxAAAACXBIWXMAAA7DAAAOwwHHb6hkAAABB0lEQVQoz41R2W7EIAzk/7+zUnMRDAEDAZNO2OwqXa2q+sHywXgGW30PAxFprWOMxycja8dxWlfdmry11LwsWq8wgBv6N0NSSnHOYbQxBjGKtVY8u8DMWwg+hMCR4TjAh7Pivd88M6cUU0pItw0vg7WUc77Aq5dczknOWozf9/0uDDybc4+iyLH6Vm7a1WTF8gkmY+Z5Bt8vsFRLlFPu4DY78amlghEnRA0kqTODdhgHSPwA7jqrHItvE8nXKq7zKQyTrgTMWNuV3GTjO49D1CraJQrCz58pztfyUre3Y5xgoie4aL2U21LU8adBCGQbMmdc6zSNkfm/4K4ous0hwNmttbj2q/UDP0ZJl7XwZKwAAAAASUVORK5CYII=&apos;); background-size: cover; display: block;">
+      <img class="gatsby-resp-image-image" style="width: 100%; height: 100%; margin: 0; vertical-align: middle; position: absolute; top: 0; left: 0; box-shadow: inset 0px 0px 0px 400px white;" alt="jsonplaceholder" title="jsonplaceholder" src="/blog/static/d637b7af38e98bf7d6f650476ead6aeb/623ee/jsonplaceholder.png" srcset="/blog/static/d637b7af38e98bf7d6f650476ead6aeb/816c5/jsonplaceholder.png 148w,
+/blog/static/d637b7af38e98bf7d6f650476ead6aeb/c766b/jsonplaceholder.png 295w,
+/blog/static/d637b7af38e98bf7d6f650476ead6aeb/623ee/jsonplaceholder.png 590w,
+/blog/static/d637b7af38e98bf7d6f650476ead6aeb/03cf8/jsonplaceholder.png 789w" sizes="(max-width: 590px) 100vw, 590px">
+    </span>
+  </span>
+  
+  </a>
+    
+</div>
+<h4><a href="https://github.com/typicode/json-server">json-server</a></h4>
+<p>Get a full fake REST API with <strong>zero coding</strong> in <strong>less than 30 seconds</strong>.</p>
+<p>Created with  ❤ for front-end developers who need a quick back-end for prototyping and mocking.</p>
+<p>Json-server gives you the full power to fake the APIs you need for development purpose, with all customization that you may need it so simulate everything.</p>
+<div class="gatsby-highlight" data-language="text"><pre class="language-text"><code class="language-text">Options:
+  --config, -c       Path to config file           [default: &quot;json-server.json&quot;]
+  --port, -p         Set port                                    [default: 3000]
+  --host, -H         Set host                             [default: &quot;localhost&quot;]
+  --watch, -w        Watch file(s)                                     [boolean]
+  --routes, -r       Path to routes file
+  --middlewares, -m  Paths to middleware files                           [array]
+  --static, -s       Set static files directory
+  --read-only, --ro  Allow only GET requests                           [boolean]
+  --no-cors, --nc    Disable Cross-Origin Resource Sharing             [boolean]
+  --no-gzip, --ng    Disable GZIP Content-Encoding                     [boolean]
+  --snapshots, -S    Set snapshots directory                      [default: &quot;.&quot;]
+  --delay, -d        Add delay to responses (ms)
+  --id, -i           Set database id property (e.g. _id)         [default: &quot;id&quot;]
+  --foreignKeySuffix, --fks  Set foreign key suffix, (e.g. _id as in post_id)
+                                                                 [default: &quot;Id&quot;]
+  --quiet, -q        Suppress log messages from output                 [boolean]
+  --help, -h         Show help                                         [boolean]
+  --version, -v      Show version number                               [boolean]</code></pre></div>
+<p>Steps to deal with it</p>
+<ol>
+<li>
+<p><code class="language-text">npm install -g json-server</code></p>
+</li>
+<li>
+<p>Create a <code class="language-text">db.json</code> file with some data</p>
+<div class="gatsby-highlight" data-language="json"><pre class="language-json"><code class="language-json"><span class="token punctuation">{</span>
+ <span class="token property">"posts"</span><span class="token operator">:</span> <span class="token punctuation">[</span>
+   <span class="token punctuation">{</span> <span class="token property">"id"</span><span class="token operator">:</span> <span class="token number">1</span><span class="token punctuation">,</span> <span class="token property">"title"</span><span class="token operator">:</span> <span class="token string">"json-server"</span><span class="token punctuation">,</span> <span class="token property">"author"</span><span class="token operator">:</span> <span class="token string">"typicode"</span> <span class="token punctuation">}</span>
+ <span class="token punctuation">]</span><span class="token punctuation">,</span>
+ <span class="token property">"comments"</span><span class="token operator">:</span> <span class="token punctuation">[</span>
+   <span class="token punctuation">{</span> <span class="token property">"id"</span><span class="token operator">:</span> <span class="token number">1</span><span class="token punctuation">,</span> <span class="token property">"body"</span><span class="token operator">:</span> <span class="token string">"some comment"</span><span class="token punctuation">,</span> <span class="token property">"postId"</span><span class="token operator">:</span> <span class="token number">1</span> <span class="token punctuation">}</span>
+ <span class="token punctuation">]</span><span class="token punctuation">,</span>
+ <span class="token property">"profile"</span><span class="token operator">:</span> <span class="token punctuation">{</span> <span class="token property">"name"</span><span class="token operator">:</span> <span class="token string">"typicode"</span> <span class="token punctuation">}</span>
+<span class="token punctuation">}</span></code></pre></div>
+</li>
+<li>
+<p><code class="language-text">json-server --watch db.json</code></p>
+</li>
+<li>
+<p>Now if you go to <a href="http://localhost:3000/posts/1">http://localhost:3000/posts/1</a>, you’ll get</p>
+<div class="gatsby-highlight" data-language="json"><pre class="language-json"><code class="language-json"><span class="token punctuation">{</span> <span class="token property">"id"</span><span class="token operator">:</span> <span class="token number">1</span><span class="token punctuation">,</span> <span class="token property">"title"</span><span class="token operator">:</span> <span class="token string">"json-server"</span><span class="token punctuation">,</span> <span class="token property">"author"</span><span class="token operator">:</span> <span class="token string">"typicode"</span> <span class="token punctuation">}</span></code></pre></div>
+</li>
+</ol>
+<h4><a href="https://jsonlint.com/">JsonLint</a></h4>
+<p>JSONLint is a validator and reformatter for JSON, a lightweight data-interchange format.</p>
+<p>This is an online tool to validate your JSON document, to make sure that you JSON document is validate and will not crashed.</p>
+<div style="text-align:center;">
+    
+  <a class="gatsby-resp-image-link" href="/blog/static/625f99ded7cebf9472298ee4840b4168/d0798/jsonvalidator.png" style="display: block" target="_blank" rel="noopener">
+  
+  <span class="gatsby-resp-image-wrapper" style="position: relative; display: block;  max-width: 590px; margin-left: auto; margin-right: auto;">
+    <span class="gatsby-resp-image-background-image" style="padding-bottom: 14.18732782369146%; position: relative; bottom: 0; left: 0; background-image: url(&apos;data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABQAAAADCAYAAACTWi8uAAAACXBIWXMAAA7DAAAOwwHHb6hkAAAASElEQVQI12N4+uTF/9+//v2nFmB4+eHy/zefrv1///UW2fgDiP5y8/+nb/f/Mzx5e/T/4zdH/7/8eOb/Kwrwy4+n/r/9fPk/AKrl4ucxySe0AAAAAElFTkSuQmCC&apos;); background-size: cover; display: block;">
+      <img class="gatsby-resp-image-image" style="width: 100%; height: 100%; margin: 0; vertical-align: middle; position: absolute; top: 0; left: 0; box-shadow: inset 0px 0px 0px 400px white;" alt="json validator" title="json validator" src="/blog/static/625f99ded7cebf9472298ee4840b4168/623ee/jsonvalidator.png" srcset="/blog/static/625f99ded7cebf9472298ee4840b4168/816c5/jsonvalidator.png 148w,
+/blog/static/625f99ded7cebf9472298ee4840b4168/c766b/jsonvalidator.png 295w,
+/blog/static/625f99ded7cebf9472298ee4840b4168/623ee/jsonvalidator.png 590w,
+/blog/static/625f99ded7cebf9472298ee4840b4168/d0798/jsonvalidator.png 726w" sizes="(max-width: 590px) 100vw, 590px">
+    </span>
+  </span>
+  
+  </a>
+    
+</div>
+<br/>
+<h3>Applications</h3>
+<h4><a href="https://www.getpostman.com/">Postman</a></h4>
+<p>You want to test your APIs, the real one or the fake APIs that your created with the above tools, with Postman you can test any Restful APIs.</p>
+<p>Postman is a powerful HTTP client for testing web services. Created by Abhinav Asthana, a programmer and designer based in Bangalore, India, Postman makes it easy to test, develop and document APIs by allowing users to quickly put together both simple and complex HTTP requests.</p>
+<p>Features</p>
+<ol>
+<li>Easy-to-use Interface</li>
+<li>History and autocomplete</li>
+<li>Easy Organization</li>
+<li>Response reviewer</li>
+<li>Test editor </li>
+<li>Collection Runner</li>
+<li>Create collection of APIs tests and share it. </li>
+</ol>
+<div style="text-align:center;">
+    
+  <a class="gatsby-resp-image-link" href="/blog/static/7c773fe31ce00b13a62c257d39089f74/91659/postman.png" style="display: block" target="_blank" rel="noopener">
+  
+  <span class="gatsby-resp-image-wrapper" style="position: relative; display: block;  max-width: 590px; margin-left: auto; margin-right: auto;">
+    <span class="gatsby-resp-image-background-image" style="padding-bottom: 71.28975265017668%; position: relative; bottom: 0; left: 0; background-image: url(&apos;data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABQAAAAOCAYAAAAvxDzwAAAACXBIWXMAAA7DAAAOwwHHb6hkAAACRklEQVQ4y51TyW7UQBD1hxElmSFKmAlEIsANiTs37vwB30EiRIRnTQKIAye45Q8IJ8gstrvdi91t+1HVEw8BgYQo6bnbXcurem1Hz+5v4fHDA/T7ffT29tDr9dDtdrC1cYuwgd3bXezudNHpbKOzvY3NrU082e/gcHcnxPV7d7C/38fBvbt49OAQ0cXpMT6+P8fk9AyT6RRTWkejEQZxjDh+g7fjAc7HcXgfDmKcnJzg0/kI70ZDvDw6wngY42w6xmQyxWAwRFTWQIOVNTZHbSRQezSVx7+YojBR0MbTo6kQSZFBEIzWsEbDqBxZluH7bI7FMsHV1QzzxQKz2QwLWlPypWmKJEkgswQvPgg8HWhczhWUzBBpKqRyhaqq1qyFElDLq0BgCwdrLe0NDKEsSxg6896jLAoo66C/XaL8cgEvl4iWCbGmCbTSIZEJysLS2EzQoGmaUKigZC7G761xnHEV/OfXKF49Rz3/SiPrFDIXyPN83UHpHByBk+u6hlIq+JiQO2NSxpoEWCMylh32F2Yen4uGi6Jz1lQIEYoyWMO261UeoalDfMTszNZqyAGOCLwrqZsqnFtKNJa6dz506L27Xlfgc0exjKgdh8FONkm6LuczpJJuXEikIkeepdCmoKQ6EHGyJzJjC4pT9CWkyKReFWSwFu56TCGpSJZDCYtcmnCrBYnvquaPKInEliwTddgKzaO2kFSQ9Wkl+GnNX4B1bHTz+2uNb5w7/h+LuBMu2grMe/4LWIab575a+X5Hm8NyaW3wAzJ5CyXN7efXAAAAAElFTkSuQmCC&apos;); background-size: cover; display: block;">
+      <img class="gatsby-resp-image-image" style="width: 100%; height: 100%; margin: 0; vertical-align: middle; position: absolute; top: 0; left: 0; box-shadow: inset 0px 0px 0px 400px white;" alt="postman" title="postman" src="/blog/static/7c773fe31ce00b13a62c257d39089f74/623ee/postman.png" srcset="/blog/static/7c773fe31ce00b13a62c257d39089f74/816c5/postman.png 148w,
+/blog/static/7c773fe31ce00b13a62c257d39089f74/c766b/postman.png 295w,
+/blog/static/7c773fe31ce00b13a62c257d39089f74/623ee/postman.png 590w,
+/blog/static/7c773fe31ce00b13a62c257d39089f74/e5345/postman.png 885w,
+/blog/static/7c773fe31ce00b13a62c257d39089f74/91659/postman.png 1132w" sizes="(max-width: 590px) 100vw, 590px">
+    </span>
+  </span>
+  
+  </a>
+    
+</div>
+<h4><a href="https://filezilla-project.org/">Filezilla</a></h4>
+<h5>What is FTP?</h5>
+<p>The File Transfer Protocol (FTP) is a standard network protocol used for the transfer of computer files between a client and server on a computer network.</p>
+<p>FileZilla is a free software, cross-platform FTP application, consisting of FileZilla Client and FileZilla Server. Client binaries are available for Windows, Linux, and macOS, server binaries are available for Windows only. Both server and client support FTP and FTPS (FTP over SSL/TLS), while the client can in addition connect to SFTP servers.</p>
+<h5>Why to us it?</h5>
+<p>If you are usually dealing with a website as admin to upload and download files but you tired from Website Admin Panel. Filezilla will make the process of uploading and downloading file more easily and more efficient .</p>
+<div style="text-align:center;">
+    
+  <a class="gatsby-resp-image-link" href="/blog/static/911aaff2e254e44a5550abe44ead87f1/cbb87/filezilla.png" style="display: block" target="_blank" rel="noopener">
+  
+  <span class="gatsby-resp-image-wrapper" style="position: relative; display: block;  max-width: 590px; margin-left: auto; margin-right: auto;">
+    <span class="gatsby-resp-image-background-image" style="padding-bottom: 70.45977011494251%; position: relative; bottom: 0; left: 0; background-image: url(&apos;data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABQAAAAOCAYAAAAvxDzwAAAACXBIWXMAAA7DAAAOwwHHb6hkAAACUUlEQVQ4y31T2Y7aQBD0R2fXJNFybT4gH7UvUZRDi8CAjW8bjE98ctmV7kGsYJWkpdL0zLRrqg9LXwcDDAd9PMoPAr1eD/LDB3yUZfTkR3zqyWLff/qMEcWNhn2Kf8J4NMAzYUz78ZD88RBfnseQDMuGYvn4oTl4UU380heYvE6w2W7hrz04toWVNke2y1HVNXa8VjWiJEUYJ0izHe1LlOUFkmkY2Gw28FwPnr+G6znCT9IEcRzBdV0Yjg9rHSJIcvgUEycJfioGvk00aJaHjGITeiCKIkgVsbJ1XYdba9v27ozdrmsvftvexV7j9vs9EVYV7q17R9Thb8bn7+8OhwMkdbmE53lwHQumvkIYRiiKAnmevyGhFLksW6orp/U/SFmW4nBsUaQ21tYr6uYoVJ7PZ5E2W5qmouB8djqdxHoFxzDYZ8VSEGxR13s0VQzfXiAIInBdWX5B6sqyEoQRKW+aRpwLHI/0HXd9J9Cwn2WQfPM3pVjhTK+cTmeUlG5M0lkJE3G6YRgipfVIJLcqD9QEVs5jxHcsRArd7/R6Sq9Vb911bEesTMRjE0XxXQOYqMgLQcZqb00y5i9U8JDSqUUAq1KmM2Qk36AZVRSFBnwtmnMdXp6MK7gMrJghujybTaGpGkzDhGVZ0HUd8/kcNqkMggBc4ziO4TiOiOFOh1QSVs/3rJ4f2xFYhLRYLLEkGBTMH/GeVU1JpW3b9Gf4Iu0rxIjRn8TnWXZpyKXWF0iqqmLJoHmcEYmmaYKQVZqmKUj/hdVqJeJ03YBFc7xQZvgDH24LHpFXl9MAAAAASUVORK5CYII=&apos;); background-size: cover; display: block;">
+      <img class="gatsby-resp-image-image" style="width: 100%; height: 100%; margin: 0; vertical-align: middle; position: absolute; top: 0; left: 0; box-shadow: inset 0px 0px 0px 400px white;" alt="filezilla" title="filezilla" src="/blog/static/911aaff2e254e44a5550abe44ead87f1/623ee/filezilla.png" srcset="/blog/static/911aaff2e254e44a5550abe44ead87f1/816c5/filezilla.png 148w,
+/blog/static/911aaff2e254e44a5550abe44ead87f1/c766b/filezilla.png 295w,
+/blog/static/911aaff2e254e44a5550abe44ead87f1/623ee/filezilla.png 590w,
+/blog/static/911aaff2e254e44a5550abe44ead87f1/cbb87/filezilla.png 870w" sizes="(max-width: 590px) 100vw, 590px">
+    </span>
+  </span>
+  
+  </a>
+    
+</div>
+<h4><a href="https://notepad-plus-plus.org/">Notepad++</a></h4>
+<p>Do you like using notepad, I think it is the time to use Notepad++.</p>
+<p>Notepad++ is a free source code editor and Notepad replacement that supports several languages. </p>
+<p>I remember my friend when I asked him what is the preferred editor which you usually use when you develop a website in PHP language. I was shocked by his answer, notepad ++.</p>
+<p>I usually use Notepad++ to take a quick note, save quick commands to use it later in the terminal, edit file quickly and so on.</p>
+<h4><a href="https://typora.io/">Typora</a></h4>
+<p>If you used to write a documentation of your code, I think you write it in markdown format.</p>
+<p>Typora is a tool designed to make markdown source code easier for both writers and readers. </p>
+<p>Its main function is to replace the clutter of the typical markdown interface with something more direct and intuitive. The usual preview window, the mode switcher and other unnecessary features will be gone, replaced with a live preview window.</p>
+<div style="text-align:center;background-color: white;">
+    
+  <a class="gatsby-resp-image-link" href="/blog/static/fe38d4d6e0664d0b289a8a334c9a3fed/c3b59/typora.png" style="display: block" target="_blank" rel="noopener">
+  
+  <span class="gatsby-resp-image-wrapper" style="position: relative; display: block;  max-width: 590px; margin-left: auto; margin-right: auto;">
+    <span class="gatsby-resp-image-background-image" style="padding-bottom: 85.34161490683229%; position: relative; bottom: 0; left: 0; background-image: url(&apos;data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABQAAAARCAIAAABSJhvpAAAACXBIWXMAAA7DAAAOwwHHb6hkAAACMUlEQVQ4y41TyVbjQAz0FzNAIBDmOI9/5AIxJLF7X9yLd3uq25A3x6noKXK5pZLUSfH6+ufwvD887R9393e/bu5ub+B397ePD7vHh/t99tl2OLDPzMvz0+/D88vhqVBKnYCv0+V8qQmpMxil4AXn8FrDtJSKcyl0o43xznddNwxD0XUtUoSQhFSMIYsyxi81rQitCatpigmlqEi5qLgWSgvOvPcxxmLoB50BEYn6CIzhOjDlhXJSe6oD1JQURkpDam/tMA7zPK/rCuWO1ERwQSnhHNqsrhFwyRn5PApSoyRllFRV9VlWZYnXPoRpnFJy33cQNGkqKdC9EPR0kowl/a0RqWRVKUpt0xibMI7jmlH0Qy8kFtOAbYxBFaukRpMItDZaNViYEJhwWdd5WaZpim3rQ1yWpZjmWRr7VXFy4vp8lseSf55YeRbv7/xY6oqyi9CEWCE1ZYbz0HYuxJ/kaSrPjBBmCNOM6UslqKLMW6HQSoitj12IMWBQZKRPC4tttylPTKoLhqqgTnm6nxpjmsYZm25VYh0qmTKQV43zPqT8b2UXPcZwIVeP0cH8phRCiv2PBeysxfV0PSwlj+PQNA3awibddirDgXUuF0hwDjUxqgdpren7Pm0bBbYbB7Z481csGdenK5mSbWM/Pj7K8vj29gbBrcT6fyjmeUIP0zTCX1v432QsrI0JXUbbpqfN44LyymLm4zef34FJC8NXJhO6f7AxW8IP830OO8VvGX/Jv2pJq2pZd0/tAAAAAElFTkSuQmCC&apos;); background-size: cover; display: block;">
+      <img class="gatsby-resp-image-image" style="width: 100%; height: 100%; margin: 0; vertical-align: middle; position: absolute; top: 0; left: 0; box-shadow: inset 0px 0px 0px 400px white;" alt="typora" title="typora" src="/blog/static/fe38d4d6e0664d0b289a8a334c9a3fed/623ee/typora.png" srcset="/blog/static/fe38d4d6e0664d0b289a8a334c9a3fed/816c5/typora.png 148w,
+/blog/static/fe38d4d6e0664d0b289a8a334c9a3fed/c766b/typora.png 295w,
+/blog/static/fe38d4d6e0664d0b289a8a334c9a3fed/623ee/typora.png 590w,
+/blog/static/fe38d4d6e0664d0b289a8a334c9a3fed/c3b59/typora.png 805w" sizes="(max-width: 590px) 100vw, 590px">
+    </span>
+  </span>
+  
+  </a>
+    
+</div>
+<h4><a href="https://developers.google.com/web/tools/chrome-devtools/">Chrome DevTools</a></h4>
+<p>Chrome DevTools is a set of web developer tools built directly into the <strong>Google Chrome browser</strong>. DevTools can help you edit pages on-the-fly and diagnose problems quickly, which ultimately helps you build better websites, faster.</p>
+<p>Inspect Elements, Debugging, Measuring your Website Performance, Local Storage, Cookies. Everything related to your website you can monitor it using this tool.</p>
+<p>Of course you need to install Google chrome to use this DevTools.</p>
+<div style="text-align:center;background-color: white;">
+    
+  <a class="gatsby-resp-image-link" href="/blog/static/d4536fbdc912c6db4a82c5ca4b1970f0/c4db5/Chrome-DevTools.png" style="display: block" target="_blank" rel="noopener">
+  
+  <span class="gatsby-resp-image-wrapper" style="position: relative; display: block;  max-width: 590px; margin-left: auto; margin-right: auto;">
+    <span class="gatsby-resp-image-background-image" style="padding-bottom: 32.8125%; position: relative; bottom: 0; left: 0; background-image: url(&apos;data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABQAAAAHCAYAAAAIy204AAAACXBIWXMAAA7DAAAOwwHHb6hkAAABZ0lEQVQoz0WRyU7lMBRE8xtIvUAZ7Hi2Mz0nD5w8BgkWCIlp1ev+/z8oro1EL47KurmplCuVkT2u/1xBSw5vFZyW8OaH4PTveaBzyOodrLU4bxtijIXT6YRpmopW8+s/xOe/sMc77OWjqLl8Qh8f0Psb1P5eELdvYOkLYr5Dx1pIY+Ccg9YalnQYBoQQULn9Bef0iCk9Q8V72GGDnBJ4OIO7COZWIhZau0L5GXoI4GSYTQxpNu37HrznqPS4YA4Ontx1zyC7GrwlOAPrGrRNXehoxgijFSYy0krRDi+pQvAYxxHee1Q+3mBYNmynBSlmZqzrioHmeXmm7hZvMFN3P2kIZyGlhDWWuhvLXjbL3VZy2jDRYHc9FvpS6UVw9EKBUYKctOu6krKuKW3dgK30E1LCTKmEEBB03bZty151c9zj4Uh4ShtGugqTGoaurqiPnEIqjY7/f4Fl3SLE5cCx7yV1ftY0TdFvDNHaY6PoV6EAAAAASUVORK5CYII=&apos;); background-size: cover; display: block;">
+      <img class="gatsby-resp-image-image" style="width: 100%; height: 100%; margin: 0; vertical-align: middle; position: absolute; top: 0; left: 0; box-shadow: inset 0px 0px 0px 400px white;" alt="Chrome DevTools" title="Chrome DevTools" src="/blog/static/d4536fbdc912c6db4a82c5ca4b1970f0/623ee/Chrome-DevTools.png" srcset="/blog/static/d4536fbdc912c6db4a82c5ca4b1970f0/816c5/Chrome-DevTools.png 148w,
+/blog/static/d4536fbdc912c6db4a82c5ca4b1970f0/c766b/Chrome-DevTools.png 295w,
+/blog/static/d4536fbdc912c6db4a82c5ca4b1970f0/623ee/Chrome-DevTools.png 590w,
+/blog/static/d4536fbdc912c6db4a82c5ca4b1970f0/e5345/Chrome-DevTools.png 885w,
+/blog/static/d4536fbdc912c6db4a82c5ca4b1970f0/c4db5/Chrome-DevTools.png 1088w" sizes="(max-width: 590px) 100vw, 590px">
+    </span>
+  </span>
+  
+  </a>
+    
+</div>
+<br/>
+<br/>
+<h3>Tips and Tricks</h3>
+<p>If you’re a Windows user like me, I think this trick would be useful if your typing on the keyboard is  fast enough.</p>
+<p>Steps</p>
+<ol>
+<li>Create a shortcut for your favorite application like <strong>Visual Studio Code</strong> and rename it to <strong>code</strong> for example.</li>
+</ol>
+<div style="text-align:right;background-color: white;">
+    
+  <a class="gatsby-resp-image-link" href="/blog/static/eeeb2dba0fea8e208ae61fa85efaa82a/8436e/code.png" style="display: block" target="_blank" rel="noopener">
+  
+  <span class="gatsby-resp-image-wrapper" style="position: relative; display: block;  max-width: 84px; margin-left: auto; margin-right: auto;">
+    <span class="gatsby-resp-image-background-image" style="padding-bottom: 116.66666666666667%; position: relative; bottom: 0; left: 0; background-image: url(&apos;data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABQAAAAXCAYAAAALHW+jAAAACXBIWXMAAA7DAAAOwwHHb6hkAAADQklEQVQ4y5WVWUhUURjHT7RREb35UEHUS0FBBNECERTVQw9R0FsUPfSSZbaYVlpiYJaWbaSU1kAppNOiKCYuSYnLOG5jjsuMjs6Mw2yao7Nv9989ZzzjqNiMHxzuveee73e//RIsQQRBCF99ASG8HwgKbFEhsSjTw0HxSu+DM/sXv4wgoUKLoQnPHB0SDcYBVPyBWUsOvR0AudyENekdOF00hJ/D07MWckUhQlmIeJbpHJj2BMLuUTn2fhAkSYblqe0gV5ux62Uve0ciIXSDg7jis0YTyO02bMvpwVPxnp8/WigCb8qw6n4HSHIb9uX1hYD0JQ2wye6bdW0GlvPbCHJLBnJHzpTXpnfC5QvOAa5M62CW7n0TAaSw7bm9SKrSh6HZFJbYCnJXjo1ZCmbFpseK6EDuWtOoHSRFjlOf1MioNzAYPVw5YENKtZ7FaXMsQJ49Kr0mF8g9McgJLdgqxkwzUxLXKnRsLyZgZFKoZctE4DoxVjR71G0qKdVjsVvIgfHlWpbNz4oJZumGh12szs6XanCuRCOGoIXF0B2Ly8ZpHy5INegwOMPWKs0uxD3qZqAVae0s03GZ3UtzmZcM71MKZRkWFSl4S3YPvIGoFgoL2o5C3f6QYo/RhT2vlUj+oYd63E0P/B/o8QsYmfRCNeGFxemPOnG4hUcWA9rtdtR3a1BQ14dW5QiyaoZwpniYZby8bxIKoxNmsfDnh+aERCUCQ7VKk7k/rz8E9HmcUKrHcOCSBNJaBUYtNtZyh98NsC6hrUdbbueLXjZVqOsfO8ex+5WSdc/qByLwRit25M4MB6/bicTcSpxNLUVDuxpBjyNshWHKi0K5Fcc/DLL6JFeaQeLFdb011N+iq9Rtmv0nv0I1Sxz2aeRLG9EzqIPLboPZYgVNMm9JLrpJDwrkFpyUDGJ9RicDHszvZx+cdPlnB6zL5cSU7S8sVivMJhMcDkfUxKisbrRo7QvKbdGJzWajz4MRzTCG1Sroxwzo6pKhqqwWf/pVC0oscjgTPlD5CgZDk9k41Ie6+gbUfP+Gr2VSFBWX4Hl6JiTSCla5fBjPn+5k0f9J0AedVosxvV6M6zh0ei3MRhP0BmOoFeb9Mrj8A4LgFkI/MfMnAAAAAElFTkSuQmCC&apos;); background-size: cover; display: block;">
+      <img class="gatsby-resp-image-image" style="width: 100%; height: 100%; margin: 0; vertical-align: middle; position: absolute; top: 0; left: 0; box-shadow: inset 0px 0px 0px 400px white;" alt="VS Code" title="VS Code" src="/blog/static/eeeb2dba0fea8e208ae61fa85efaa82a/8436e/code.png" srcset="/blog/static/eeeb2dba0fea8e208ae61fa85efaa82a/8436e/code.png 84w" sizes="(max-width: 84px) 100vw, 84px">
+    </span>
+  </span>
+  
+  </a>
+    
+</div>
+<ol start="2">
+<li>
+<p>Move this shortcut to <code class="language-text">C:\Windows</code></p>
+</li>
+<li>
+<p>try to hit <code class="language-text">CTRL + R</code> then write <code class="language-text">code</code></p>
+</li>
+<li>
+<p>Visual Studio Code will open normally :D.</p>
+</li>
+<li>
+<p>Repeat Steps 1 and 2 for your favorite app.</p>
+</li>
+</ol>
+<hr>
+<p><strong>Next Steps</strong></p>
+<p>In the next article, we will continue our modern setup to convert your machine to an awesome front-end machine.</p></div><div class="ui__Foot-sc-94ucj3-4 hhOsxd"><ul class="ui__Tags-sc-94ucj3-6 fwNQox"><li style="background:hsl(94.79585547551467, 70.09321461315264%, 72.38395739844525%)" class="ui__Tag-sc-94ucj3-7 jlOoGv"><span>front-end</span></li><li style="background:hsl(207.51002637742167, 80.61978875111143%, 65.80182683595486%)" class="ui__Tag-sc-94ucj3-7 jlOoGv"><span> modern</span></li><li style="background:hsl(39.86843255231768, 66.69867368293691%, 70.44338488025227%)" class="ui__Tag-sc-94ucj3-7 jlOoGv"><span> setup</span></li><li style="background:hsl(109.27857782118986, 83.2405982853509%, 67.4625374531763%)" class="ui__Tag-sc-94ucj3-7 jlOoGv"><span> nodejs</span></li><li style="background:hsl(60.768675053183216, 74.69080929090252%, 70.31000609166455%)" class="ui__Tag-sc-94ucj3-7 jlOoGv"><span> python</span></li><li style="background:hsl(177.07027211903514, 67.37546420855453%, 68.81474941834388%)" class="ui__Tag-sc-94ucj3-7 jlOoGv"><span> chrome</span></li><li style="background:hsl(317.678353121218, 54.33435002610217%, 69.19812214480268%)" class="ui__Tag-sc-94ucj3-7 jlOoGv"><span> devtools</span></li><li style="background:hsl(98.47435118318992, 56.63069600811966%, 68.8146635236226%)" class="ui__Tag-sc-94ucj3-7 jlOoGv"><span> typora</span></li><li style="background:hsl(331.39018505099926, 81.03757030678963%, 70.15032720128617%)" class="ui__Tag-sc-94ucj3-7 jlOoGv"><span> filezilla</span></li><li style="background:hsl(293.2382233343733, 93.43955619552477%, 74.88017942435518%)" class="ui__Tag-sc-94ucj3-7 jlOoGv"><span> cmdr</span></li><li style="background:hsl(197.92125353758098, 30.483881836425805%, 66.17904719498151%)" class="ui__Tag-sc-94ucj3-7 jlOoGv"><span> terminalizer</span></li><li style="background:hsl(9.887094476600327, 48.07830332269093%, 73.86558244996353%)" class="ui__Tag-sc-94ucj3-7 jlOoGv"><span> mocking</span></li><li style="background:hsl(7.328290149522294, 92.5377619232959%, 68.6805136818039%)" class="ui__Tag-sc-94ucj3-7 jlOoGv"><span> json-server</span></li><li style="background:hsl(35.80516461713236, 26.100916255603373%, 74.17139172462649%)" class="ui__Tag-sc-94ucj3-7 jlOoGv"><span> mocky</span></li><li style="background:hsl(35.4289678487762, 89.11893828200834%, 73.30767391651577%)" class="ui__Tag-sc-94ucj3-7 jlOoGv"><span> postman</span></li></ul><div class="ui__Share-sc-94ucj3-5 kMtpRa"><span>Share: </span><div role="button" tabindex="0" class="SocialMediaShareButton SocialMediaShareButton--twitter"><div style="width:30px;height:30px"><svg viewBox="0 0 64 64" width="30" height="30" class="social-icon social-icon--twitter "><g><circle cx="32" cy="32" r="31" fill="#00aced"></circle></g><g><path d="M48,22.1c-1.2,0.5-2.4,0.9-3.8,1c1.4-0.8,2.4-2.1,2.9-3.6c-1.3,0.8-2.7,1.3-4.2,1.6 C41.7,19.8,40,19,38.2,19c-3.6,0-6.6,2.9-6.6,6.6c0,0.5,0.1,1,0.2,1.5c-5.5-0.3-10.3-2.9-13.5-6.9c-0.6,1-0.9,2.1-0.9,3.3 c0,2.3,1.2,4.3,2.9,5.5c-1.1,0-2.1-0.3-3-0.8c0,0,0,0.1,0,0.1c0,3.2,2.3,5.8,5.3,6.4c-0.6,0.1-1.1,0.2-1.7,0.2c-0.4,0-0.8,0-1.2-0.1 c0.8,2.6,3.3,4.5,6.1,4.6c-2.2,1.8-5.1,2.8-8.2,2.8c-0.5,0-1.1,0-1.6-0.1c2.9,1.9,6.4,2.9,10.1,2.9c12.1,0,18.7-10,18.7-18.7 c0-0.3,0-0.6,0-0.8C46,24.5,47.1,23.4,48,22.1z" fill="white"></path></g></svg></div></div></div></div></div><nav role="navigation" class="ui__NavContainer-p40sjr-0 inWEyQ"><div class="ui__NavigationPrev-p40sjr-1 eukqOq"><b>PREVIOUS POST</b><a rel="prev" href="/blog/gatsby-blog/">My Blog - My Gatsby!</a></div><div style="clear:both"></div></nav><div class="ui__Discussion-sc-94ucj3-3 FmFZX"><div id="disqus_thread"></div></div><div class="ui__Biography-yn6g6c-0 pbozq"><img src="/blog/static/profile-pic-0d367b908c2ce7d1b4d6269cb0dc05e4.jpg" alt="Hamed Farag"/><div><h2>Hamed Farag</h2><p>Front-End Engineer<!-- --> | <!-- -->Cairo-Egypt</p><p><p>Developer living &#x26; working in Egypt, Cairo. Falling in love with JavaScript ♥ and trying to write any code with it.</p></p></div></div></div></div><div class="PoweredBy-lgcmhb-0 kTudxj">Powered By<!-- --> <a href="https://www.gatsbyjs.org/" target="_blank" alt="gatsby js"><b>GatsbyJS</b></a> <!-- -->with a<!-- --> <a href="https://github.com/hamed-farag/blog" target="_blank"><b>custom development</b></a> <!-- -->flavor using<!-- --> <a href="https://reactjs.org/" target="_blank" alt="react js"><b>ReactJS</b></a> <!-- -->💖</div></div></div></div><script>
+  
+  
+  if(true) {
+    (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+    (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+    m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+    })(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
+  }
+  if (typeof ga === "function") {
+    ga('create', 'undefined', 'auto', {});
+      
+      
+      
+      }
+      </script><script id="gatsby-script-loader">/*<![CDATA[*/window.page={"componentChunkName":"component---src-templates-blog-template-index-js","jsonName":"front-end-env-p-1-3f3","path":"/front-end-env-p1/"};window.dataPath="116/path---front-end-env-p-1-3-f-3-649-mtyadke75NLLO60XHC5fp4C5pHY";/*]]>*/</script><script id="gatsby-chunk-mapping">/*<![CDATA[*/window.___chunkMapping={"app":["/app-c96a02f61ed0f57c039b.js"],"component---node-modules-gatsby-plugin-offline-app-shell-js":["/component---node-modules-gatsby-plugin-offline-app-shell-js-70e1fea6712b0977d975.js"],"component---src-templates-blog-template-index-js":["/component---src-templates-blog-template-index-js-65984ec889f52e41f183.js"],"component---src-pages-404-index-js":["/component---src-pages-404-index-js-8b2e67145605cac5f0d4.js"],"component---src-pages-index-js":["/component---src-pages-index-js-2d901d38e60736032e41.js"],"pages-manifest":["/pages-manifest-f8d14b936d3280c22e67.js"]};/*]]>*/</script><script src="/blog/webpack-runtime-aab03f1c6e82d2550bcb.js" async=""></script><script src="/blog/0-8f94de978e24fa0a3ab4.js" async=""></script><script src="/blog/1-fa8b5ee810b880b2d9cb.js" async=""></script><script src="/blog/9-0a83d5e1c34a1b816747.js" async=""></script><script src="/blog/app-c96a02f61ed0f57c039b.js" async=""></script><script src="/blog/component---src-templates-blog-template-index-js-65984ec889f52e41f183.js" async=""></script></body></html>
