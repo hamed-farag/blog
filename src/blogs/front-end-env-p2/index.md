@@ -42,7 +42,7 @@ An IDE, on the other hand, needs to be able to edit text and, depending on the d
 
 You may Wondering and ask a question? My Text editor doing all the these features so what is the different between them?. Yes your text editor will be a fully-fledged IDE if you install the right packages and extensions into your text editor.
 
-**Back Again**, what is my current IDE or text editor? i like **Visual Studio Code** and i wokring on it scince mid-2016 till now. I tried to work with Atom but honstly i wasn't comfortable to work with it.
+**Back Again**, what is my current IDE or text editor? I like **Visual Studio Code** and i wokring on it scince mid-2016 till now. I tried to work with Atom but honstly i wasn't comfortable to work with it.
 
 ### [Visual Studio Code](https://code.visualstudio.com/)
 
@@ -56,4 +56,30 @@ Lets start to convert Visual studio code from text editor to A powerful IDE.
 
 #### 1. Extensions
 
+To convert your text editor to be a fully-fledged IDE, you need to install the proper extensions 
 
+
+
+Auto Close Tag
+
+Bracket Pair Colorizer
+
+Dot Env
+
+EditorConfig for VS Code
+
+ESLint
+
+Github Pull requests
+
+GitLens
+
+Material Icon Theme
+
+Path Intellisense
+
+Print Code
+
+vscode-styled-components
+
+Prettier
