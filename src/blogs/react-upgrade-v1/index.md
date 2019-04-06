@@ -1,15 +1,15 @@
 ---
 id: 08fce572-ae0c-46f5-bcaa-2c88be47632c
 title: Quick Article - Upgrade React Project!
-subTitle: How i built my technical blog!
-date: '2019-03-30T20:10:03.284Z'
-tags: quick, react, redux, upgrade
+subTitle: from 15.4 to 16.8
+date: '2019-04-06'
+tags: quick, react, redux, upgrade, router, manual, redux-form, proptypes, refs
 category: front-end
-readingTime:  min read
+readingTime:  4 min read
 ---
 
 <div style="text-align:center;background-color:#fff">
-    <img src="./assets/Atlas.jpg" alt="Meaning of npm" title="Meaning of npm" />
+    <img src="./assets/Atlas.jpg" alt="Atlas hold the react logo title="Atlas hold the react logo " />
 </div>
 <br/>
 
@@ -21,7 +21,7 @@ I will list below all what I did to make the project working again after a lot o
 
 ## 1- Upgrade React and React DOM
 
-The first step ever, just install React 16.8 and React DOM 16.8, then tried to run the application. Boom, a shine white screen opened in my browser and with a lot of error but the main error is
+The first step ever, just install React 16.8 and React DOM 16.8, then tried to run the application. Boom, a shiny white screen opened in my browser and with a lot of error but the main error is
 
 `React.PropTypes.string.isRequired cannot read property isRequired of undefined`
 
@@ -41,15 +41,15 @@ So I revisited all the components that use PropTypes and Adjust it based on Prop
 - Triggering imperative animations.
 - Integrating with third-party DOM libraries.
 
-**Where is the problem?** My Project was use "Refs" with an older API where `ref` attribute is a **string** , like `"textInput"`, and the DOM node is accessed as `this.refs.textInput`. [[React Documentation](<https://reactjs.org/docs/refs-and-the-dom.html>)]
+**Where is the problem?** In my project, we were used "Refs" with an old API where `ref` attribute is a **string**, like `"textInput"`, and the DOM node is accessed as `this.refs.textInput`. [[React Documentation](<https://reactjs.org/docs/refs-and-the-dom.html>)]
 
->My Project was filled with the usage of this Legacy API, the **String Refs**, so in React Documentation they recommend to use callback pattern or createRef API instead.
+>My Project was used this Legacy API, the **String Refs**, so in React Documentation they recommend to use callback pattern or createRef API instead.
 
-Revisited the whole project and replace the Legacy API with createRef API 
+So, we revisited the whole project and replace the Legacy API with createRef API 
 
 ### 2.2 Redux with refs
 
-I remember well those 3 days to know why parent component cannot access the ref of its child, Why ? Because parent was contain button if user click on it, a textbox in the child will be focused 😄 and the child for some reason was connected with redux :sweat:. 
+I remember well those 3 days to know why parent component cannot access the ref of its child, Why? Because parent was contain button if user click on it, a textbox in the child will be focused 😄 and the child for some reason was connected with redux :sweat:. 
 
 > **Note:**
 >
@@ -68,7 +68,7 @@ I remember well those 3 days to know why parent component cannot access the ref 
 
 Because of the upgrading of redux, `withRef` was deprecated and replaced with `forwardRef`, and this mean the accessing of this wrapper component changes too.
 
-#### Demo 
+#### Showcase
 
 ```javascript
 // Old code and remember, i am react v.15.4
@@ -147,11 +147,11 @@ class ChildComponent extends React.Component {
 const Child = connect(null, null, null, { forwardRef: true })(ChildComponent);
 ```
 
-A lot of changes specially in accessing the wrapper component but it worth.
+A lot of changes, especially in accessing the wrapper component.
 
 ## 3. Upgrade most of packages
 
-Because of most of the following packages using the PropTypes from React package, I updated them to latest as they Use the PropTypes package directly.
+Because of most of the following packages using the **PropTypes** from React package, I updated them to latest as they Use the **PropTypes** package directly.
 
 ```json
 "draft-js": "^0.10.5",
@@ -175,7 +175,7 @@ But the most painful packages were **redux-form 5.3.3** and **redux-form-validat
 
 I tried to upgrade **redux-form 5.3.3** and **redux-form-validation 0.0.8** normally like the other packages but this project has almost 6 forms and if I upgrade them I will totally rewrite these forms because redux-form has been completely rewritten for v6, because of a fundamental design change. 
 
-So what is the workaround? Simply I downloaded redux-form 5.3.3 and upgrade it manually by install PropTypes and change the React.PropTypes to be PropTypes directly and thanks for redux-form team for creating unit tests to make sure that everything is okay. Of course I included redux-form code into my project until I rewrite the 6 forms and of course I installed extra packages that redux-form depends on them.
+So what is the workaround? Simply I downloaded redux-form 5.3.3 and upgrade it manually by install **PropTypes** and change the **React.PropTypes** to be **PropTypes** directly and thanks for redux-form team for creating unit tests to make sure that everything is okay. Of course, I included redux-form code into my project until I rewrite the 6 forms and of course I installed extra packages that redux-form depends on them.
 
 ```json
 "is-promise": "2.1.0"
@@ -185,20 +185,18 @@ So what is the workaround? Simply I downloaded redux-form 5.3.3 and upgrade it m
 
 ## 4. React-router
 
-The biggest nightmare, **react-router** changed to be **react-router-dom**, a huge changes happened from **v.3** to **v.5**, so lets talk about the changes in steps.
+The biggest nightmare, **React Router v4** is a complete rewrite, not just enhancements added to the previous version, and **react-router** changed to be **react-router-dom**, huge changes happened from **v.3** to **v.5**
 
-1. Replace **react-router** with **react-router-dom**
-2. Remove browserHistory and replace it with withRouter HOC
-3. 
-4. Pass Histroy to non component React component
+I followed to main articles to upgrade from **react-router v.3** to **react-router v.5**
 
-Manually parse queryString as removed from react-router 5
+- [React Router v4 Unofficial Migration Guide](<https://codeburst.io/react-router-v4-unofficial-migration-guide-5a370b8905a>)
 
-revisit params to be match.params
+- [Migrating from v2/v3 to v4](<https://github.com/ReactTraining/react-router/blob/master/packages/react-router/docs/guides/migrating.md>)
 
-Update All Routes
+These two articles are great to follow them if you want to upgrade your react-router.
 
-Revisit 'Query' at links
-Remove query property from "to" property at Link Element
+<hr/>
 
-Use location.search instead of location.query
+#### Of course, there are some crashes after this upgrade, I upgraded some packages too like react-dropzone and so on due to some configurations changes and its usage.
+
+##### This upgrade costed me more than 30hr in 3 days continuously. When I was working on this upgrade I was thinking a lot to take a step back because of a lot of crashes.
