@@ -61,7 +61,7 @@ module.exports = {
     {
       resolve: `gatsby-plugin-google-analytics`,
       options: {
-        trackingId: `${process.env.github_access_token}`,
+        trackingId: `${process.env.google_analytics_trackId}`,
       },
     },
     `gatsby-plugin-feed`,
